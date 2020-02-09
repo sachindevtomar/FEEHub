@@ -2,6 +2,8 @@ $lt-gray: #ddd;
 $background-dark: #512DA8;
 $background-light: #9575CD;
 $background-footer-color: #E3E3E3;
+$background-moredark: #4527A0;
+$background-darkRed: #B92026;
 
 @mixin zero-margin($pad-up-down, $pad-left-right) {
     margin: 0px auto;
@@ -11,6 +13,11 @@ $background-footer-color: #E3E3E3;
 .footer{
     background-color: $background-footer-color;
     @include zero-margin(20px, 0px);
+
+    a{
+        color: $background-darkRed;
+    }
+
     .copyright{
         text-align: center;
         margin: 0 auto;
@@ -27,6 +34,17 @@ $background-footer-color: #E3E3E3;
         margin-right: 10px;
         }
     }
+
+    .footer-map{
+        overflow: hidden; 
+        height: 200px;
+        
+        #maq-office-map{
+            border:0; 
+            margin-top: -150px;
+        }
+    }
+
 }
 
 .btn-facebook {color:#fff!important; background-color:#3b5998!important;}
