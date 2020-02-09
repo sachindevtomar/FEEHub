@@ -1,3 +1,15 @@
+<div class="container">
+  <div *ngIf="user">
+    <h1 class="user-welcome">Welcome, {{user.name}}.</h1>
+    <p class="user-role">You’re logged in as {{user.role}}</p>
+  </div>
+  
+  <!-- <h2 class="section-header" id="databoard-courses">Courses</h2>
+  <div></div> -->
+</div>
+
+
+<!-- 
 <div class="container"
      fxLayout="row"
      fxLayout.sm="column"
@@ -47,4 +59,4 @@
   </mat-card-content>
 </mat-card>
 
-</div>
+</div> -->
