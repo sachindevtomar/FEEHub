@@ -7,10 +7,12 @@
 
 body { 
   padding: 0; 
-  margin: 0; 
-  font-family: Roboto, sans-serif; 
+  margin: 0;  
 }
 
+*{
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 576px;
 

@@ -11,5 +11,10 @@ export const COURSES: Course[] =[
         courseDescription: 'Learning description 2',
         courseDetailsPageLink: 'https://link2'
     },
+    {
+        courseName: 'Learning Title 3',
+        courseDescription: 'Learning description 3',
+        courseDetailsPageLink: 'https://link3'
+    }
 
 ];

@@ -7,6 +7,10 @@ export const FEATURES: Feature[] = [
     },
     {
         featureName: 'Feature 2',
+        featureDescription: 'Feature Description 2'
+    },
+    {
+        featureName: 'Feature 3',
         featureDescription: 'Feature Description 3'
     }
 ];
