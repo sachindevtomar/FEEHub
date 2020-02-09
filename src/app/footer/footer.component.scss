@@ -27,6 +27,17 @@ $background-footer-color: #E3E3E3;
         margin-right: 10px;
         }
     }
+
+    .footer-map{
+        overflow: hidden; 
+        height: 200px;
+        
+        #maq-office-map{
+            border:0; 
+            margin-top: -150px;
+        }
+    }
+
 }
 
 .btn-facebook {color:#fff!important; background-color:#3b5998!important;}
