@@ -7,6 +7,10 @@ import {Leader} from '../shared/leader';
 import { LeaderService } from "../services/leader.service";
 import { User } from "../Shared/user";
 import { USER } from "../Shared/users";
+import { Course } from "../Shared/course";
+import { COURSES } from "../Shared/courses";
+import { Feature } from "../Shared/feature";
+import { FEATURES } from "../Shared/features";
 
 @Component({
   selector: 'app-home',
@@ -15,19 +19,23 @@ import { USER } from "../Shared/users";
 })
 export class HomeComponent implements OnInit {
 
-  dish: Dish;
-  promotion: Promotion;
-  leader: Leader;
+  // dish: Dish;
+  // promotion: Promotion;
+  // leader: Leader;
   user: User = USER[0];
+  courses: Course[] = COURSES;
+  features: Feature[] = FEATURES;
+
+
 
   constructor(private dishservice: DishService, 
     private promotionservice: PromotionService,
     private leaderservice: LeaderService) { }
 
   ngOnInit() {
-    this.dish = this.dishservice.getFeaturedDish();
-    this.promotion = this.promotionservice.getFeaturedPromotion();
-    this.leader = this.leaderservice.getFeaturedLeader();
+    // this.dish = this.dishservice.getFeaturedDish();
+    // this.promotion = this.promotionservice.getFeaturedPromotion();
+    // this.leader = this.leaderservice.getFeaturedLeader();
   }
 
 }
