@@ -4,10 +4,12 @@
       <h1 class="user-welcome">Welcome, {{user.name}}.</h1>
       <p class="user-role">You’re logged in as {{user.role}}</p>
     </div>
+
     <div class="home-tiles row">
+      
       <div class="col-md-6 col-sm-12 home-tile-format">
         <div id="home-courses-tile" class="home-card-view">
-          <h2 class="item-icon glyphicon glyphicon-education">Courses</h2>
+          <h2 class="item-icon glyphicon glyphicon-education"> Courses</h2>
           <div *ngFor="let course of courses">
             <h3>{{course.courseName}}</h3>
             <p>{{course.courseDescription}}
@@ -16,9 +18,10 @@
           <a href="Viewall"> View All</a>
         </div>
       </div>
+
       <div class="col-md-6 col-sm-12 home-tile-format">
         <div id="home-features-tile" class="home-card-view">
-          <h2 class="item-icon glyphicon glyphicon-asterisk">Features</h2>
+          <h2 class="item-icon glyphicon glyphicon-flag"> Features</h2>
           <div *ngFor="let feature of features">
             <h3>{{feature.featureName}}</h3>
             <p>{{feature.featureDescription}}</p>
@@ -26,6 +29,7 @@
           <a href="Viewall"> View All</a>
         </div>
       </div>
+      
     </div>
   </main>
 </div>

@@ -5,6 +5,9 @@ $background-footer-color: #E3E3E3;
 $background-moredark: #4527A0;
 $background-darkRed: #B92026;
 
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
 @mixin zero-margin($pad-up-down, $pad-left-right) {
     margin: 0px auto;
     padding: $pad-up-down $pad-left-right;
@@ -23,6 +26,8 @@ $background-darkRed: #B92026;
         margin: 0 auto;
     }
     .social{
+        
+
         ul {
         list-style-type: none;
         margin: 0px;
@@ -41,7 +46,15 @@ $background-darkRed: #B92026;
         
         #maq-office-map{
             border:0; 
-            margin-top: -150px;
+            margin-top: -100px;
+        }
+    }
+
+    .footer-maq-address{
+        margin-top: 50px;
+
+        @media (max-width: #{$screen-md-min}) {
+                margin-top: 20px;
         }
     }
 
