@@ -2,8 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
+import { User } from "../Shared/user";
+import { USER } from "../Shared/users";
 
-let users = [{ id: 1, firstName: 'Jason', lastName: 'Watmore', username: 'test', password: 'test' }];
+let users = USER;
+//let users = [{ id: 1, firstName: 'Jason', lastName: 'Watmore', username: 'test', password: 'test' }];
 
 @Injectable()
 export class AuthenticationLoginInterceptor implements HttpInterceptor {
@@ -34,10 +37,9 @@ export class AuthenticationLoginInterceptor implements HttpInterceptor {
             const user = users.find(x => x.username === username && x.password === password);
             if (!user) return error('Username or password is incorrect');
             return ok({
-                id: user.id,
                 username: user.username,
-                firstName: user.firstName,
-                lastName: user.lastName,
+                name: user.name,
+                role: user.role,
                 token: 'fake-jwt-token'
             })
         }

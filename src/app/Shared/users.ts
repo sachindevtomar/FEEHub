@@ -3,10 +3,14 @@ import { User } from "./user";
 export const USER: User[] = [
     {
         name: 'Anchal Gupta',
-        role: 'Administrator'
+        role: 'Administrator',
+        username: "anchal",
+        password: "anchal"
     },
     {
         name: 'Sachin Dev Tomar',
-        role: 'Sub-Administrator'
+        role: 'Sub-Administrator',
+        username: "sachin",
+        password: "sachin"
     }
 ];

@@ -11,6 +11,8 @@ import { Course } from "../Shared/course";
 import { COURSES } from "../Shared/courses";
 import { Feature } from "../Shared/feature";
 import { FEATURES } from "../Shared/features";
+import { AuthenticationService } from "../services/authentication.service";
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -25,17 +27,18 @@ export class HomeComponent implements OnInit {
   user: User = USER[0];
   courses: Course[] = COURSES;
   features: Feature[] = FEATURES;
-
-
+  currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  name = this.currentUser.name;
+  role = this.currentUser.role;
 
   constructor(private dishservice: DishService, 
     private promotionservice: PromotionService,
-    private leaderservice: LeaderService) { }
+    private leaderservice: LeaderService,
+    private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
     // this.dish = this.dishservice.getFeaturedDish();
     // this.promotion = this.promotionservice.getFeaturedPromotion();
     // this.leader = this.leaderservice.getFeaturedLeader();
-  }
-
+  }  
 }
