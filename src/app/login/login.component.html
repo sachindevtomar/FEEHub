@@ -6,7 +6,7 @@
         <img class="maq-login-logo" src="/assets/images/MAQLoginLogo.png" alt="logo">
       </div>
 
-      <!-- <div *ngIf="error" class="alert alert-danger">{{error}}</div> -->
+      <div *ngIf="error" class="alert alert-danger">{{error}}</div>
       <h1>Login</h1>
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
