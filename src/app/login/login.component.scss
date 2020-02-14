@@ -1,0 +1,54 @@
+.outer-login-div {
+    .login-background-img {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  
+    @media (max-width: 600px), (max-height: 366px) {
+      .login-background-img {
+        height: 0;
+        width: 0;
+      }
+    }
+  
+    .middle-login-div {
+      .inner-login-div {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        max-width: 440px;
+        width: calc(100% - 40px);
+        padding: 44px;
+        margin-bottom: 28px;
+        margin-top: 10%;
+        background-color: white;
+        opacity: 0.95;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        min-width: 320px;
+        min-height: 338px;
+        overflow: hidden;
+  
+        h1{
+            font-size: 26px;
+        }
+  
+        .maq-login-logo{
+          height: 30px;
+        }
+  
+      }
+      
+      @media (max-width: 600px), (max-height: 366px) {
+        .inner-login-div {
+          vertical-align: top;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  
