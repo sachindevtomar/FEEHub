@@ -11,7 +11,7 @@ import { AuthGuard } from '../_helpers';
 
 export const routes: Routes = [
     {path:'home', component: HomeComponent, canActivate: [AuthGuard]},
-    {path: 'menu', component: MenuComponent},
+    {path: 'menu', component: MenuComponent, canActivate: [AuthGuard]},
     {path: 'contactus', component: ContactComponent},
     {path: 'about', component: AboutComponent},
     {path: 'dishdetail/:id', component: DishdetailComponent},

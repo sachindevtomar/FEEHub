@@ -28,6 +28,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DishService } from "./services/dish.service";
 import { PromotionService } from "./services/promotion.service";
 import { LeaderService } from './services/leader.service';
+import { JSONServerService } from './services/jsonserver.service';
 
 import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { LoginComponent } from './login/login.component';
@@ -35,6 +36,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthenticationBackendProvider } from "./_helpers";
 import { JwtInterceptor } from "./_helpers/jwt.interceptor";
 import { ErrorInterceptor } from "./_helpers/error.interceptor";
+
 
 
 @NgModule({
@@ -71,6 +73,7 @@ import { ErrorInterceptor } from "./_helpers/error.interceptor";
     DishService,
     PromotionService,
     LeaderService,
+    JSONServerService,
     AuthenticationBackendProvider,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
