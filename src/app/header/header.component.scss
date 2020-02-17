@@ -1,63 +1,70 @@
 $lt-gray: #ddd;
-$background-dark: #512DA8;
-$background-light: #9575CD;
-$background-pale: #D1C4E9;
-$background-moredark: #4527A0;
-$background-darkRed: #B92026;
+$background-dark: #512da8;
+$background-light: #9575cd;
+$background-pale: #d1c4e9;
+$background-moredark: #4527a0;
+$background-darkRed: #b92026;
 
 // Small tablets (portrait view)
 $screen-md-min: 768px;
 
 @mixin zero-margin($pad-up-down, $pad-left-right) {
-    margin: 0px auto;
-    padding: $pad-up-down $pad-left-right;
+  margin: 0px auto;
+  padding: $pad-up-down $pad-left-right;
 }
 
 .jumbotron {
-    @include zero-margin(70px,30px);
-    background: $background-light ;
-    color:floralwhite;
-    min-height: 150px;
+  @include zero-margin(70px, 30px);
+  background: $background-light;
+  color: floralwhite;
+  min-height: 150px;
 }
 
-.home-navbar{
-    background: $background-darkRed;
-    color: white;
-    .maq-company-logo{
-        margin-top: 10px;
+.home-navbar {
+  background: $background-darkRed;
+  color: white;
+  .maq-company-logo {
+    margin-top: 10px;
+  }
+  .nav-brand-separator {
+    border-right: 2px solid white;
+    height: 40px;
+    padding-right: 15px;
+    margin-top: 3px;
+    margin-right: 10px;
+  }
+  .icon-bar {
+    background-color: white;
+  }
+  #myNavbar {
+    a {
+      color: white;
     }
-    .nav-brand-separator{
-        border-right: 2px solid white;
-        height:40px;
-        padding-right: 15px;
-        margin-top: 3px;
-        margin-right: 10px;
+    a:hover {
+      color: $background-light;
     }
-    .icon-bar{
-        background-color: white;
+    a:active {
+      color: $background-light;
     }
-    #myNavbar{
-        a{
-            color:white; 
-        }
-        a:hover{
-            color:$background-light;
-        }
-        a:active{
-            color:$background-light;
-        }
-        .header-user-img{
-            height:20px;
-            width: 25px;
-        }
+    .header-user-img {
+      height: 20px;
+      width: 25px;
     }
+    .dropdown-option {
+      color: black;
+    }
+  }
 
-
-    @media (max-width: #{$screen-md-min}) {
-        .nav-brand-separator{
-            border: none;
-            margin-right: 0px;
-            margin-left: 10px;
-        }
+  @media (max-width: #{$screen-md-min}) {
+    .nav-brand-separator {
+      border: none;
+      margin-right: 0px;
+      margin-left: 10px;
     }
+    #myNavbar {
+      .dropdown-option {
+        color: white;
+      }
+    }
+  }
 }
