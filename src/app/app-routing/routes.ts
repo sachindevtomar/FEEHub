@@ -6,12 +6,13 @@ import { AboutComponent } from '../about/about.component';
 import { HomeComponent } from '../home/home.component';
 import { ContactComponent } from '../contact/contact.component';
 import { LoginComponent } from '../login/login.component';
-
 import { AuthGuard } from '../_helpers';
+import { FeaturesComponent } from '../features/features.component';
 
 export const routes: Routes = [
     {path:'home', component: HomeComponent, canActivate: [AuthGuard]},
     {path: 'menu', component: MenuComponent},
+    { path: 'features', component: FeaturesComponent, canActivate: [AuthGuard] },
     {path: 'contactus', component: ContactComponent},
     {path: 'about', component: AboutComponent},
     {path: 'dishdetail/:id', component: DishdetailComponent},
