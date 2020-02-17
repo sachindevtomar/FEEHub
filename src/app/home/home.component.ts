@@ -5,8 +5,6 @@ import { Promotion } from '../shared/promotion';
 import { PromotionService } from '../services/promotion.service';
 import {Leader} from '../shared/leader';
 import { LeaderService } from "../services/leader.service";
-import { User } from "../Shared/user";
-import { USER } from "../Shared/users";
 import { Course } from "../Shared/course";
 import { COURSES } from "../Shared/courses";
 import { Feature } from "../Shared/feature";
@@ -24,7 +22,6 @@ export class HomeComponent implements OnInit {
   // dish: Dish;
   // promotion: Promotion;
   // leader: Leader;
-  user: User = USER[0];
   courses: Course[] = COURSES;
   features: Feature[] = FEATURES;
   currentUser = JSON.parse(localStorage.getItem('currentUser'));
