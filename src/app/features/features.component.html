@@ -2,7 +2,17 @@
   <div class="feature-page">
   <h2>Features List</h2>
   <p>Following are the list of features available that can we used to show/hide sections on the portal or it can be used at the service side as well.</p>
-  <div class="table-responsive">
+  
+  <!-- search box for searching features -->
+  <div id="feature-search-box">
+    <input type="text" placeholder="Search for a feature" [(ngModel)]="featureSearchText" aria-label="Search" id="feature-search-inputbox">
+    <button class="glyphicon glyphicon-search" title="search button" id="feature-search-btn">
+      <span class="x-screen-reader"></span>
+    </button>
+  </div>
+
+  <!-- table to show the features list -->
+  <div class="table-responsive feature-table">
     <table class="table table-hover">
       <thead>
         <tr>
@@ -15,7 +25,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let feature of featuresList; index as featureIndex">
+        <tr *ngFor="let feature of featuresList | featuresFilter: featureSearchText ; let featureIndex = index">
           <td>{{featureIndex + 1}}</td>
           <td>{{feature.Name}}</td>
           <td>{{feature.Description}}</td>

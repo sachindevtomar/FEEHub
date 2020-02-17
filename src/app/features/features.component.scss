@@ -1,62 +1,96 @@
 
 .feature-page{
-    .feature-state-toggle-label {
+
+    #feature-search-box {
+        max-width: 600px !important;
         position: relative;
-        display: inline-block;
-        width: 45px;
-        height: 20px;
-        vertical-align: middle;
-        margin-top: 8px;
+        height: 38px;
+        margin-bottom: 10px;
 
-        input {
-            display:none;
+        #feature-search-inputbox {
+            position: relative;
+            outline: 2px solid transparent;
+            border: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            padding: 7px 10px;
+            padding-right: 38px;
+            border: 1px solid rgba(0, 0, 0, 0.6);
         }
 
-        .feature-state-toggle-span {
+        #feature-search-btn {
             position: absolute;
-            cursor: pointer;
             top: 0;
-            left: 0;
             right: 0;
-            bottom: 0;
-            background-color: #A1A6AB;
-            -webkit-transition: .4s;
-            transition: .4s;
-          }
+            outline: 0;
+            border: 2px solid transparent;
+            background-color: #ffffff;
+            height: 34px;
+            width: 34px;
+            margin: 2px 2px 1px 1px;
+        }
+    }
 
-        .feature-state-toggle-span:before {
-            position: absolute;
-            content: "";
-            height: 16px;
-            width: 14px;
-            left: 2px;
-            bottom: 2px;
-            background-color: white;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
+    .feature-table{
+        .feature-state-toggle-label {
+            position: relative;
+            display: inline-block;
+            width: 45px;
+            height: 20px;
+            vertical-align: middle;
+            margin-top: 8px;
 
-        input:checked + .feature-state-toggle-span {
-            background-color: #800080;
-        }
-          
-        input:focus + .feature-state-toggle-span {
-            box-shadow: 0 0 1px #2196F3;
-        }
-          
-        input:checked + .feature-state-toggle-span:before {
-            -webkit-transform: translateX(26px);
-            -ms-transform: translateX(26px);
-            transform: translateX(26px);
-        }
-          
-        /* Rounded feature-state-toggle-spans */
-        .feature-state-toggle-span.feature-state-toggle-round {
-            border-radius: 34px;
-        }
-          
-        .feature-state-toggle-span.feature-state-toggle-round:before {
-            border-radius: 50%;
+            input {
+                display:none;
+            }
+
+            .feature-state-toggle-span {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #A1A6AB;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            .feature-state-toggle-span:before {
+                position: absolute;
+                content: "";
+                height: 16px;
+                width: 14px;
+                left: 2px;
+                bottom: 2px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            input:checked + .feature-state-toggle-span {
+                background-color: #800080;
+            }
+            
+            input:focus + .feature-state-toggle-span {
+                box-shadow: 0 0 1px #2196F3;
+            }
+            
+            input:checked + .feature-state-toggle-span:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+            }
+            
+            /* Rounded feature-state-toggle-spans */
+            .feature-state-toggle-span.feature-state-toggle-round {
+                border-radius: 34px;
+            }
+            
+            .feature-state-toggle-span.feature-state-toggle-round:before {
+                border-radius: 50%;
+            }
         }
     }
 }
