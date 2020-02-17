@@ -12,6 +12,11 @@ import { AuthenticationService } from '../services';
 })
 export class HeaderComponent implements OnInit {
 
+  
+  currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  name = this.currentUser.name;
+  role = this.currentUser.role;
+
   constructor(public dialog: MatDialog, private router: Router,
     private authenticationService: AuthenticationService) { }
 
