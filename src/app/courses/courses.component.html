@@ -6,10 +6,47 @@
     </p>
     <div id="courses-search-box">
       <input type="text" placeholder="Search for a course" aria-label="Search" id="courses-search-inputbox">
-      <button class="glyphicon glyphicon-search" name="search-button" id="courses-search-btn">
+      <button class="glyphicon glyphicon-search" title="search button" id="courses-search-btn">
         <span class="x-screen-reader"></span>
-      </button>   
-    
+      </button>
+    </div>
+    <div>
+      <div class="col-sm-4 col-md-3">
+        <aside>
+          <div class="courses-filter-container">
+            <h2>Filters</h2>
+            <div class="courses-menu-list">
+              <ul class="courses-mainmenu-list">
+                <li>
+                  <button class="dropdown-toggle courses-btn" data-toggle="collapse" data-target="#collapse-course-menu"
+                    aria-expanded="true" aria-controls="collapse-course-menu">
+                    Course</button>
+                  <ul class="collapse  multi-collapse" id="collapse-course-menu">
+                    <li><button class="courses-btn" role="checkbox"><span>Course 1</span></button></li>
+                    <li><button class="courses-btn" role="checkbox"><span>Course 2</span></button></li>
+                  </ul>
+                </li>
+                <li>
+                  <button class="dropdown-toggle courses-btn" data-toggle="collapse" data-target="#collapse-duration-menu"
+                    aria-expanded="true" aria-controls="collapse-duration-menu">
+                    Duration</button>
+                  <ul class="collapse  multi-collapse" id="collapse-duration-menu">
+                    <li><button class="courses-btn" role="checkbox"><span>Duration 1</span></button></li>
+                    <li><button class="courses-btn" role="checkbox"><span>Duration 2</span></button></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <div class="col-sm-8 col-sm-9">
+        <section>
+          <div class="courses-information-container">
+            <h2>Courses</h2>
+          </div>
+        </section>
+      </div>
     </div>
   </main>
 </div>

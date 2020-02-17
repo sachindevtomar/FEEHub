@@ -8,7 +8,7 @@ import { ContactComponent } from '../contact/contact.component';
 import { LoginComponent } from '../login/login.component';
 
 import { AuthGuard } from '../_helpers';
-import { CoursesComponent } from '@app/courses/courses.component';
+import { CoursesComponent } from '../courses/courses.component';
 
 export const routes: Routes = [
     {path:'home', component: HomeComponent, canActivate: [AuthGuard]},
