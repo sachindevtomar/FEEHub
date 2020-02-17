@@ -1,4 +1,5 @@
 <div class="container">
+  <div class="feature-page">
   <h2>Features List</h2>
   <p>Following are the list of features available that can we used to show/hide sections on the portal or it can be used at the service side as well.</p>
   <div class="table-responsive">
@@ -14,16 +15,23 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Anna</td>
-          <td>Pitt</td>
-          <td>35</td>
-          <td>New York</td>
-          <td>USA</td>
+        <tr *ngFor="let feature of featuresList; index as featureIndex">
+          <td>{{featureIndex + 1}}</td>
+          <td>{{feature.Name}}</td>
+          <td>{{feature.Description}}</td>
+          <td>{{feature.CreatedDate.toDateString()}}</td>
+          <td>{{feature.UpdatedDate.toDateString()}}</td>
+          <td>
+            <label class="feature-state-toggle-label">
+              <input type="checkbox" [checked]="feature.State"
+                (change)="feature.State = !feature.State">
+              <span class="feature-state-toggle-span feature-state-toggle-round"></span>
+            </label>
+          </td>
         </tr>
       </tbody>
     </table>
+  </div>
   </div>
 </div>
 

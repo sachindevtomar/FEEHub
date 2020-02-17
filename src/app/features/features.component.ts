@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Feature } from '../models/feature';
+import { FEATURES } from '../Shared/features'
 
 @Component({
   selector: 'app-features',
@@ -8,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class FeaturesComponent implements OnInit {
 
   constructor() { }
+  
+  public featuresList: Feature[] = FEATURES;
 
   ngOnInit() {
   }
