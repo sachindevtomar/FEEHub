@@ -37,10 +37,9 @@
   }
 
   .courses-filter-container {
-
     .courses-menu-list {
-
-      width: 85%;
+      margin-top: 10px;
+      width: 90%;
 
       ul {
         list-style: none;
@@ -72,7 +71,27 @@
     }
   }
 
-  .courses-information-container{
+  .courses-information-container {
+    .courses-cards-div {
+      margin-top: 30px;
 
+      .courses-card {
+        margin: 15px;
+        outline: 15px solid transparent;
+        display: block;
+        /* border: 2px solid; */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        margin: 12px;
+        padding: 15px;
+
+        .courses-card-body {
+          .courses-card-title {
+          }
+
+          .courses-card-text {
+          }
+        }
+      }
+    }
   }
 }

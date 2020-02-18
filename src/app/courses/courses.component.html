@@ -47,9 +47,14 @@
         <section>
           <div class="row courses-information-container">
             <h2>Courses</h2>
-            <div class="card">
-              <div class="card-body">
-                This is some text within a card body.
+            <div class="courses-cards-div">
+              <div class="courses-card card" *ngFor="let course of courses">
+                <div class="courses-card-body card-body">
+                  <h3 class="courses-card-title card-title">{{course.courseName}}</h3>
+                  <p class="courses-card-text card-text">
+                    {{course.courseDescription}}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
