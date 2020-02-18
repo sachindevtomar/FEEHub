@@ -37,6 +37,7 @@ import { JwtInterceptor } from "./_helpers/jwt.interceptor";
 import { ErrorInterceptor } from "./_helpers/error.interceptor";
 import { FeaturesComponent } from './features/features.component';
 import { FeaturesFilterPipe } from './pipes/featuresfilter.pipe';
+import { AddFeatureModalComponent } from './add-feature-modal/add-feature-modal.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { FeaturesFilterPipe } from './pipes/featuresfilter.pipe';
     ContactComponent,
     LoginComponent,
     FeaturesComponent,
-    FeaturesFilterPipe
+    FeaturesFilterPipe,
+    AddFeatureModalComponent
   ],
   imports: [
     BrowserModule,
