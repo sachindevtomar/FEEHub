@@ -12,7 +12,8 @@ export class FeaturesComponent implements OnInit {
   constructor() { }
   
   public featuresList: Feature[] = FEATURES;
-
+  public featureSearchText: string = "";
+  
   ngOnInit() {
   }
 
