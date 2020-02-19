@@ -33,6 +33,62 @@ export const COURSES: Course[] =[
         courseDetailsPageLink: 'https://link1',
         tags: ['Bing','Web', 'Maps'],
         duration: 4
+    },
+    {
+        id: 1005,
+        courseName: 'Bing Spatial Data Services',
+        courseDescription: 'The Bing Maps SDK for Android and Bing Maps SDK for iOS are libraries for building mapping applications for Android and iOS. The SDKs feature a native map control and an accompanying map services API set. The map control is powered by a full vector 3D map engine with a number of standard mapping capabilities including displaying icons, drawing polylines and polygons, and overlaying texture sources. The engine brings in the same 3D Native support you know from the Xaml Map Control in Windows 10, including worldwide 3D elevation data (via our Digital Elevation Model).',
+        courseDetailsPageLink: 'https://link1',
+        tags: ['Bing', 'Android' , 'iOS'],
+        duration: 11
+    },
+    {
+        id: 1006,
+        courseName: 'Azure Bot Service',
+        courseDescription: 'Azure Bot Service and Bot Framework provide tools to build, test, deploy, and manage intelligent bots all in one place. Through the use of modular and extensible framework provided by the SDK, tools, templates, and AI services developers can create bots that use speech, understand natural language, handle questions and answers, and more.',
+        courseDetailsPageLink: 'https://link1',
+        tags: ['Azure', 'BOT', 'AI'],
+        duration: 14
+    },
+    {
+        id: 1007,
+        courseName: 'Dynamics 365 Business Central',
+        courseDescription: 'Business Central is a business management solution for small and mid-sized organizations that automates and streamlines business processes and helps you manage your business. Highly adaptable and rich with features, Business Central enables companies to manage their business, including finance, manufacturing, sales, shipping, project management, services, and more. Companies can easily add functionality that is relevant to the region of operation, and that is customized to support even highly specialized industries.',
+        courseDetailsPageLink: 'https://link1',
+        tags: ['Dynamics 365'],
+        duration: 13
+    },
+    {
+        id: 1007,
+        courseName: 'Dynamics 365 Business Central',
+        courseDescription: 'Business Central is a business management solution for small and mid-sized organizations that automates and streamlines business processes and helps you manage your business. Highly adaptable and rich with features, Business Central enables companies to manage their business, including finance, manufacturing, sales, shipping, project management, services, and more. Companies can easily add functionality that is relevant to the region of operation, and that is customized to support even highly specialized industries.',
+        courseDetailsPageLink: 'https://link1',
+        tags: ['Dynamics 365'],
+        duration: 13
+    },
+    {
+        id: 1007,
+        courseName: 'Dynamics 365 Business Central',
+        courseDescription: 'Business Central is a business management solution for small and mid-sized organizations that automates and streamlines business processes and helps you manage your business. Highly adaptable and rich with features, Business Central enables companies to manage their business, including finance, manufacturing, sales, shipping, project management, services, and more. Companies can easily add functionality that is relevant to the region of operation, and that is customized to support even highly specialized industries.',
+        courseDetailsPageLink: 'https://link1',
+        tags: ['Dynamics 365'],
+        duration: 13
+    },
+    {
+        id: 1007,
+        courseName: 'Dynamics 365 Business Central',
+        courseDescription: 'Business Central is a business management solution for small and mid-sized organizations that automates and streamlines business processes and helps you manage your business. Highly adaptable and rich with features, Business Central enables companies to manage their business, including finance, manufacturing, sales, shipping, project management, services, and more. Companies can easily add functionality that is relevant to the region of operation, and that is customized to support even highly specialized industries.',
+        courseDetailsPageLink: 'https://link1',
+        tags: ['Dynamics 365'],
+        duration: 13
+    },
+    {
+        id: 1007,
+        courseName: 'Dynamics 365 Business Central',
+        courseDescription: 'Business Central is a business management solution for small and mid-sized organizations that automates and streamlines business processes and helps you manage your business. Highly adaptable and rich with features, Business Central enables companies to manage their business, including finance, manufacturing, sales, shipping, project management, services, and more. Companies can easily add functionality that is relevant to the region of operation, and that is customized to support even highly specialized industries.',
+        courseDetailsPageLink: 'https://link1',
+        tags: ['Dynamics 365'],
+        duration: 13
     }
 
 ];
