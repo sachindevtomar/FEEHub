@@ -35,6 +35,9 @@ import { LoginComponent } from './login/login.component';
 import { AuthenticationBackendProvider } from "./_helpers";
 import { JwtInterceptor } from "./_helpers/jwt.interceptor";
 import { ErrorInterceptor } from "./_helpers/error.interceptor";
+import { FeaturesComponent } from './features/features.component';
+import { FeaturesFilterPipe } from './pipes/featuresfilter.pipe';
+import { AddFeatureModalComponent } from './add-feature-modal/add-feature-modal.component';
 
 
 @NgModule({
@@ -47,7 +50,10 @@ import { ErrorInterceptor } from "./_helpers/error.interceptor";
     AboutComponent,
     HomeComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    FeaturesComponent,
+    FeaturesFilterPipe,
+    AddFeatureModalComponent
   ],
   imports: [
     BrowserModule,

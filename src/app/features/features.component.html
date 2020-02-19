@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="feature-page">
+    <h2>Features List</h2>
+    <p>Following are the list of features available that can we used to show/hide sections on the portal or it can be
+      used at the service side as well.</p>
+
+    <!-- search box for searching features -->
+    <div id="feature-search-box">
+      <input type="text" placeholder="Search for a feature" [(ngModel)]="featureSearchText" aria-label="Search"
+        id="feature-search-inputbox">
+      <button class="glyphicon glyphicon-search" title="search button" id="feature-search-btn">
+        <span class="x-screen-reader"></span>
+      </button>
+    </div>
+
+    <!-- table to show the features list -->
+    <div class="table-responsive feature-table">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Created Date</th>
+            <th>Last Updated</th>
+            <th>Toggle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let feature of featuresList | featuresFilter: featureSearchText ; let featureIndex = index">
+            <td>{{featureIndex + 1}}</td>
+            <td>{{feature.Name}}</td>
+            <td>{{feature.Description}}</td>
+            <td>{{feature.CreatedDate.toDateString()}}</td>
+            <td>{{feature.UpdatedDate.toDateString()}}</td>
+            <td>
+              <label class="feature-state-toggle-label">
+                <input type="checkbox" [checked]="feature.State" (change)="feature.State = !feature.State">
+                <span class="feature-state-toggle-span feature-state-toggle-round"></span>
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Add feature button area -->
+    <div class="feature-add-feature-area">
+      <a class="btn btn-primary" data-toggle="modal" data-target="#add-feature-modal">
+        <span class="glyphicon glyphicon-plus"></span> Add feature
+      </a>
+    </div>
+
+    <app-add-feature-modal></app-add-feature-modal>
+
+  </div>
+</div>
