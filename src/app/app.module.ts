@@ -54,7 +54,7 @@ import { CoursesComponent } from './courses/courses.component';
     LoginComponent,
     FeaturesComponent,
     FeaturesFilterPipe,
-    AddFeatureModalComponent
+    AddFeatureModalComponent,
     CoursesComponent
   ],
   imports: [
