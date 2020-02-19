@@ -39,6 +39,7 @@ import { FeaturesComponent } from './features/features.component';
 import { FeaturesFilterPipe } from './pipes/featuresfilter.pipe';
 import { AddFeatureModalComponent } from './add-feature-modal/add-feature-modal.component';
 import { CoursesComponent } from './courses/courses.component';
+import { JwPaginationComponent } from 'jw-angular-pagination';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { CoursesComponent } from './courses/courses.component';
     FeaturesComponent,
     FeaturesFilterPipe,
     AddFeatureModalComponent,
-    CoursesComponent
+    CoursesComponent,
+    JwPaginationComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +75,7 @@ import { CoursesComponent } from './courses/courses.component';
     MatCheckboxModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [
     DishService,

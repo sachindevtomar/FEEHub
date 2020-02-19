@@ -73,18 +73,17 @@
 
   .courses-information-container {
     .courses-cards-div {
-      margin-top: 30px;
 
       .courses-card {
-        margin: 15px;
-        outline: 15px solid transparent;
-        display: block;
-        /* border: 2px solid; */
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        margin: 12px;
-        padding: 15px;
 
         .courses-card-body {
+
+          padding: 10px;
+          outline: 15px solid transparent;
+          display: block;
+          /* border: 2px solid; */
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
           .courses-card-title {
           }
 

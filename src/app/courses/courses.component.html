@@ -10,7 +10,9 @@
         <span class="x-screen-reader"></span>
       </button>
     </div>
-    <div>
+    
+    <div>  
+      
       <div class="col-sm-4 col-md-3">
         <aside>
           <div class="row courses-filter-container">
@@ -43,20 +45,37 @@
           </div>
         </aside>
       </div>
-      <div class="col-sm-8 col-sm-9">
+
+
+      <div class="col-sm-8 col-md-9">
         <section>
           <div class="row courses-information-container">
             <h2>Courses</h2>
             <div class="courses-cards-div">
-              <div class="courses-card card" *ngFor="let course of courses">
+              <div class="courses-card card">
                 <div class="courses-card-body card-body">
-                  <h3 class="courses-card-title card-title">{{course.courseName}}</h3>
-                  <p class="courses-card-text card-text">
-                    {{course.courseDescription}}
-                  </p>
+                  <div class="course-card-each-item" *ngFor="let course of pagedItems">
+                    <h3 class="courses-card-title card-title">{{course.courseName}}</h3>
+                    <p class="courses-card-text card-text">
+                      {{course.courseDescription}}
+                    </p>
+                  </div>
+                </div>
+                <div class="card-footer">    
+                  <jw-pagination [items]="courses" (changePage)="beginPagination($event)"></jw-pagination>    
                 </div>
               </div>
             </div>
+            <!-- <div class="card text-center m-3">     
+              <div class="card-body">    
+                  <div *ngFor="let item of pagedItems">{{item.name}} for {{item.product}}</div>    
+              </div>    
+              <div class="card-footer pb-0 pt-3">    
+                  <jw-pagination [items]="data" (changePage)="beginPagination($event)"></jw-pagination>    
+              </div>    
+            </div> -->
+
+
           </div>
         </section>
       </div>
