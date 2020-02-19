@@ -83,12 +83,22 @@
           display: block;
           /* border: 2px solid; */
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+          
+          .course-card-each-item{
+            padding:10px;
 
-          .courses-card-title {
+            .courses-card-title {
+            }
+
+            .courses-card-text {
+            }
           }
 
-          .courses-card-text {
+          .course-card-each-item:hover{
+            padding:11px;
+            box-shadow: 0 0 11px rgba(33,33,33,.2); 
           }
+
         }
       }
     }

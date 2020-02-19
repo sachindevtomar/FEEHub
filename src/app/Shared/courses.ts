@@ -59,36 +59,36 @@ export const COURSES: Course[] =[
         duration: 13
     },
     {
-        id: 1007,
-        courseName: 'Dynamics 365 Business Central',
-        courseDescription: 'Business Central is a business management solution for small and mid-sized organizations that automates and streamlines business processes and helps you manage your business. Highly adaptable and rich with features, Business Central enables companies to manage their business, including finance, manufacturing, sales, shipping, project management, services, and more. Companies can easily add functionality that is relevant to the region of operation, and that is customized to support even highly specialized industries.',
-        courseDetailsPageLink: 'https://link1',
-        tags: ['Dynamics 365'],
-        duration: 13
+        id: 1008,
+        courseName: 'SQL Server 2019 on Azure',
+        courseDescription: 'Get started with SQL Server 2019 on Azure Virtual Machines in minutes with preconfigured images on Linux and Windows. Take advantage of unique built-in security and manageability to automate tasks like patching and backups, and save with Azure Hybrid Benefit by reusing your existing on-premises licences.',
+        courseDetailsPageLink: 'https://link23',
+        tags: ['SQL Server', 'C#'],
+        duration: 5
     },
     {
-        id: 1007,
-        courseName: 'Dynamics 365 Business Central',
-        courseDescription: 'Business Central is a business management solution for small and mid-sized organizations that automates and streamlines business processes and helps you manage your business. Highly adaptable and rich with features, Business Central enables companies to manage their business, including finance, manufacturing, sales, shipping, project management, services, and more. Companies can easily add functionality that is relevant to the region of operation, and that is customized to support even highly specialized industries.',
-        courseDetailsPageLink: 'https://link1',
-        tags: ['Dynamics 365'],
-        duration: 13
+        id: 1009,
+        courseName: 'Microsoft Teams',
+        courseDescription: 'Microsoft Teams is a unified communication and collaboration platform that combines persistent workplace chat, video meetings, file storage, and application integration.',
+        courseDetailsPageLink: 'https://link134',
+        tags: ['O365', 'Teams'],
+        duration: 9
     },
     {
-        id: 1007,
-        courseName: 'Dynamics 365 Business Central',
-        courseDescription: 'Business Central is a business management solution for small and mid-sized organizations that automates and streamlines business processes and helps you manage your business. Highly adaptable and rich with features, Business Central enables companies to manage their business, including finance, manufacturing, sales, shipping, project management, services, and more. Companies can easily add functionality that is relevant to the region of operation, and that is customized to support even highly specialized industries.',
+        id: 1010,
+        courseName: 'Microsoft Edge for iOS and Android',
+        courseDescription: 'Microsoft Edge on iOS and Android can now take advantage of single sign-on (SSO) to all web apps (SaaS and on-premises) that are Azure AD-connected. This means users of Microsoft Edge will be able to access Azure AD-connected web apps without having to re-enter their credentials. ',
         courseDetailsPageLink: 'https://link1',
-        tags: ['Dynamics 365'],
-        duration: 13
+        tags: ['Browser', 'Edge'],
+        duration:9
     },
     {
-        id: 1007,
-        courseName: 'Dynamics 365 Business Central',
-        courseDescription: 'Business Central is a business management solution for small and mid-sized organizations that automates and streamlines business processes and helps you manage your business. Highly adaptable and rich with features, Business Central enables companies to manage their business, including finance, manufacturing, sales, shipping, project management, services, and more. Companies can easily add functionality that is relevant to the region of operation, and that is customized to support even highly specialized industries.',
-        courseDetailsPageLink: 'https://link1',
-        tags: ['Dynamics 365'],
-        duration: 13
+        id: 1011,
+        courseName: 'SharePoint Online',
+        courseDescription: 'SharePoint is a web-based collaborative platform that integrates with Microsoft Office. Launched in 2001, SharePoint is primarily sold as a document management and storage system, but the product is highly configurable and usage varies substantially among organizations.',
+        courseDetailsPageLink: 'https://link1235',
+        tags: ['O365', 'Sharepoint'],
+        duration: 5
     }
 
 ];
