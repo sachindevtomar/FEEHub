@@ -5,7 +5,7 @@
       techincal skills with latest courses.
     </p>
     <div id="courses-search-box">
-      <input type="text" placeholder="Search for a course" aria-label="Search" id="courses-search-inputbox">
+      <input type="text" placeholder="Search for a course" [(ngModel)] = "courseSearchText" aria-label="Search" id="courses-search-inputbox">
       <button class="glyphicon glyphicon-search" title="search button" id="courses-search-btn">
         <span class="x-screen-reader"></span>
       </button>
@@ -55,7 +55,7 @@
             <div class="courses-cards-div">
               <div class="courses-card card">
                 <div class="courses-card-body card-body">
-                  <div class="course-card-each-item" *ngFor="let course of pagedItems">
+                  <div class="course-card-each-item" *ngFor="let course of pagedItems| coursesFilter: courseSearchText">
                     <h3 class="courses-card-title card-title">{{course.courseName}}</h3>
                     <p class="courses-card-text card-text">
                       {{course.courseDescription}}

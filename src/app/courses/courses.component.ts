@@ -12,6 +12,7 @@ export class CoursesComponent implements OnInit {
   title = 'custom-pagination-angular'; 
   pagedItems: Array<any>;  
   courses = [];
+  public courseSearchText: string = "";
 
   constructor() { }
 

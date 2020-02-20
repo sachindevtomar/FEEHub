@@ -40,6 +40,7 @@ import { FeaturesFilterPipe } from './pipes/featuresfilter.pipe';
 import { AddFeatureModalComponent } from './add-feature-modal/add-feature-modal.component';
 import { CoursesComponent } from './courses/courses.component';
 import { JwPaginationComponent } from 'jw-angular-pagination';
+import { CoursesFilterPipe } from './pipes/coursesfilter.pipe';
 
 
 @NgModule({
@@ -57,6 +58,7 @@ import { JwPaginationComponent } from 'jw-angular-pagination';
     FeaturesFilterPipe,
     AddFeatureModalComponent,
     CoursesComponent,
+    CoursesFilterPipe,
     JwPaginationComponent
   ],
   imports: [
