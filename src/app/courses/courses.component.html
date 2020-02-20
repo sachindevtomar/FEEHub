@@ -10,9 +10,9 @@
         <span class="x-screen-reader"></span>
       </button>
     </div>
-    
-    <div class="course-main-section">  
-      
+
+    <div class="course-main-section">
+
       <!-- Filter section -->
       <div class="col-sm-4 col-md-3">
         <aside>
@@ -62,21 +62,11 @@
                     </p>
                   </div>
                 </div>
-                <div class="card-footer">    
-                  <jw-pagination [items]="courses" (changePage)="beginPagination($event)"></jw-pagination>    
+                <div class="card-footer">
+                  <jw-pagination [items]="courses" (changePage)="beginPagination($event)" pageSize="5"></jw-pagination>
                 </div>
               </div>
             </div>
-            <!-- <div class="card text-center m-3">     
-              <div class="card-body">    
-                  <div *ngFor="let item of pagedItems">{{item.name}} for {{item.product}}</div>    
-              </div>    
-              <div class="card-footer pb-0 pt-3">    
-                  <jw-pagination [items]="data" (changePage)="beginPagination($event)"></jw-pagination>    
-              </div>    
-            </div> -->
-
-
           </div>
         </section>
       </div>

@@ -22,7 +22,7 @@
       <div class="col-md-6 col-sm-12 home-tile-format">
         <div id="home-features-tile" class="home-card-view">
           <h2 class="item-icon glyphicon glyphicon-flag"> Features</h2>
-          <div *ngFor="let feature of features">
+          <div *ngFor="let feature of features| slice:0:3">
             <h3>{{feature.Name}}</h3>
             <p>{{feature.Description}}</p>
           </div>

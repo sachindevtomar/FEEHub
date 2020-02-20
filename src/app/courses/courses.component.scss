@@ -73,19 +73,16 @@
 
   .courses-information-container {
     .courses-cards-div {
-
       .courses-card {
-
         .courses-card-body {
-
           padding: 10px;
           outline: 15px solid transparent;
           display: block;
           /* border: 2px solid; */
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-          
-          .course-card-each-item{
-            padding:10px;
+
+          .course-card-each-item {
+            padding: 10px;
 
             .courses-card-title {
             }
@@ -94,11 +91,10 @@
             }
           }
 
-          .course-card-each-item:hover{
-            padding:11px;
-            box-shadow: 0 0 11px rgba(33,33,33,.2); 
+          .course-card-each-item:hover {
+            padding: 11px;
+            box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
           }
-
         }
       }
     }
