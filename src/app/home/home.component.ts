@@ -1,16 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Dish } from '../shared/dish';
-import { DishService } from '../services/dish.service';
-import { Promotion } from '../shared/promotion';
-import { PromotionService } from '../services/promotion.service';
-import {Leader} from '../shared/leader';
-import { LeaderService } from "../services/leader.service";
 import { Course } from "../models/course";
 import { COURSES } from "../Shared/courses";
 import { Feature } from "../models/feature";
 import { FEATURES } from "../Shared/features";
 import { AuthenticationService } from "../services/authentication.service";
-import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -28,9 +21,7 @@ export class HomeComponent implements OnInit {
   name = this.currentUser.name;
   role = this.currentUser.role;
 
-  constructor(private dishservice: DishService, 
-    private promotionservice: PromotionService,
-    private leaderservice: LeaderService,
+  constructor(
     private authenticationService: AuthenticationService) { }
 
   ngOnInit() {

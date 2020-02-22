@@ -17,17 +17,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
-import { DishdetailComponent } from './dishdetail/dishdetail.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
-
-import { DishService } from "./services/dish.service";
-import { PromotionService } from "./services/promotion.service";
-import { LeaderService } from './services/leader.service';
 
 import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { LoginComponent } from './login/login.component';
@@ -46,11 +39,8 @@ import { CoursesFilterPipe } from './pipes/coursesfilter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    DishdetailComponent,
     HeaderComponent,
     FooterComponent,
-    AboutComponent,
     HomeComponent,
     ContactComponent,
     LoginComponent,
@@ -80,9 +70,6 @@ import { CoursesFilterPipe } from './pipes/coursesfilter.pipe';
     HttpClientModule
   ],
   providers: [
-    DishService,
-    PromotionService,
-    LeaderService,
     AuthenticationBackendProvider,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
