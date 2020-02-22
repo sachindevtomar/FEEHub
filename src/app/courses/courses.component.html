@@ -5,7 +5,8 @@
       techincal skills with latest courses.
     </p>
     <div id="courses-search-box">
-      <input type="text" placeholder="Search for a course" [(ngModel)] = "courseSearchText" aria-label="Search" id="courses-search-inputbox">
+      <input type="text" placeholder="Search for a course" [(ngModel)]="courseSearchText" aria-label="Search"
+        id="courses-search-inputbox">
       <button class="glyphicon glyphicon-search" title="search button" id="courses-search-btn">
         <span class="x-screen-reader"></span>
       </button>
@@ -23,11 +24,12 @@
                 <li>
                   <button class="dropdown-toggle courses-btn" data-toggle="collapse" data-target="#collapse-course-menu"
                     aria-expanded="true" aria-controls="collapse-course-menu">
-                    Course</button>
+                    Technology</button>
                   <ul class="collapse  multi-collapse" id="collapse-course-menu">
-                    <li><button class="courses-btn courses-btn-checkbox" role="checkbox">Course 1</button></li>
-                    <li><button class="courses-btn courses-btn-checkbox" role="checkbox"><span>Course 2</span></button>
-                    </li>
+                    <li *ngFor="let technology of technologyTags" class="courses-technology-tags">
+                      <button class="courses-btn courses-technology-btn" role="checkbox">{{technology}}
+                        <input type="checkbox" class="courses-btn-checkbox" />
+                      </button></li>
                   </ul>
                 </li>
                 <li>
@@ -35,9 +37,9 @@
                     data-target="#collapse-duration-menu" aria-expanded="true" aria-controls="collapse-duration-menu">
                     Duration</button>
                   <ul class="collapse  multi-collapse" id="collapse-duration-menu">
-                    <li><button class="courses-btn courses-btn-checkbox" role="checkbox"><span>Duration
+                    <li><button class="courses-btn courses-technology-btn" role="checkbox"><span>Duration
                           1</span></button></li>
-                    <li><button class="courses-btn courses-btn-checkbox" role="checkbox"><span>Duration
+                    <li><button class="courses-btn courses-technology-btn" role="checkbox"><span>Duration
                           2</span></button></li>
                   </ul>
                 </li>

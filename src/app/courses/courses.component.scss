@@ -41,6 +41,10 @@
       margin-top: 10px;
       width: 90%;
 
+      .courses-mainmenu-list{
+        background-color: rgb(240, 240, 240);
+      }
+
       ul {
         list-style: none;
         padding: 0;
@@ -63,9 +67,20 @@
           text-align: left;
           width: 100%;
         }
+      }
 
-        .courses-btn-checkbox {
-          padding-left: 10px;
+      #collapse-course-menu {
+        max-height: 300px;
+        overflow: hidden;
+
+        .courses-technology-btn {
+          font-size: small;
+          margin-bottom: -20px;
+          padding-left: 15px;
+
+          .courses-btn-checkbox {
+            float: right;
+          }
         }
       }
     }
