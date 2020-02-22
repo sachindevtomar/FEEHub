@@ -14,12 +14,13 @@ export class CoursesComponent implements OnInit {
   courses = [];
   public courseSearchText: string = "";
   public technologyTags : string[] = [];
-
+  public courseFilterShowMore: boolean = true;
+  public courseShowMoreLessButton: boolean = false; 
   constructor() { }
 
   ngOnInit() {
     this.courses = COURSES;
-    this.collectAllTags();
+    this.collectAllTags();    
   }
 
   beginPagination(pagedItems: Array<any>) {  
@@ -35,7 +36,20 @@ export class CoursesComponent implements OnInit {
       return self.indexOf(item) == pos;
   });
     this.technologyTags = this.technologyTags.sort();
-    console.log(this.technologyTags);
-    console.log(this.technologyTags.length);
   }
+
+  showMoreTechnologies(){
+    this.courseFilterShowMore = ! this.courseFilterShowMore;
+    document.getElementById('collapse-course-menu').style.maxHeight="initial";
+  }
+
+  showLessTechnologies(){
+    this.courseFilterShowMore = ! this.courseFilterShowMore;
+    document.getElementById('collapse-course-menu').style.maxHeight="300px";
+  }
+
+  showMoreLessbutton(){
+    this.courseShowMoreLessButton = ! this.courseShowMoreLessButton;
+  }
+
 }

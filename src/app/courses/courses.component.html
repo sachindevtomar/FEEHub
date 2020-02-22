@@ -23,14 +23,17 @@
               <ul class="courses-mainmenu-list">
                 <li>
                   <button class="dropdown-toggle courses-btn" data-toggle="collapse" data-target="#collapse-course-menu"
-                    aria-expanded="true" aria-controls="collapse-course-menu">
+                    aria-expanded="true" aria-controls="collapse-course-menu" (click)="showMoreLessbutton()">
                     Technology</button>
                   <ul class="collapse  multi-collapse" id="collapse-course-menu">
                     <li *ngFor="let technology of technologyTags" class="courses-technology-tags">
-                      <button class="courses-btn courses-technology-btn" role="checkbox">{{technology}}
+                      <button class="courses-btn courses-technology-btn">{{technology}}
                         <input type="checkbox" class="courses-btn-checkbox" />
-                      </button></li>
+                      </button>
+                    </li>
                   </ul>
+                  <div class="courses-viewmore-btn" id="collapse-course-viewmore" (click)="showMoreTechnologies()" *ngIf="courseFilterShowMore && courseShowMoreLessButton">View more</div>
+                  <div class="courses-viewmore-btn" id="collapse-course-viewless" (click)="showLessTechnologies()" *ngIf="!courseFilterShowMore && courseShowMoreLessButton">View less</div>
                 </li>
                 <li>
                   <button class="dropdown-toggle courses-btn" data-toggle="collapse"
