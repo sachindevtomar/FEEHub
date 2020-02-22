@@ -38,6 +38,9 @@ import { ErrorInterceptor } from "./_helpers/error.interceptor";
 import { FeaturesComponent } from './features/features.component';
 import { FeaturesFilterPipe } from './pipes/featuresfilter.pipe';
 import { AddFeatureModalComponent } from './add-feature-modal/add-feature-modal.component';
+import { CoursesComponent } from './courses/courses.component';
+import { JwPaginationComponent } from 'jw-angular-pagination';
+import { CoursesFilterPipe } from './pipes/coursesfilter.pipe';
 
 
 @NgModule({
@@ -53,7 +56,10 @@ import { AddFeatureModalComponent } from './add-feature-modal/add-feature-modal.
     LoginComponent,
     FeaturesComponent,
     FeaturesFilterPipe,
-    AddFeatureModalComponent
+    AddFeatureModalComponent,
+    CoursesComponent,
+    CoursesFilterPipe,
+    JwPaginationComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +77,7 @@ import { AddFeatureModalComponent } from './add-feature-modal/add-feature-modal.
     MatCheckboxModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [
     DishService,

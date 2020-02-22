@@ -1,41 +1,50 @@
-.container{
-    .user-welcome{
-        font-size: 46px;
-        font-weight: 600;
-        line-height: 56px;
-    }
+.container {
+  .user-welcome {
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 56px;
+  }
 
-    .user-role{
-        font-size: 20px;
-        line-height: 24px;
-        padding-top: 8px;
-        padding-bottom: 24px;
-        margin: 0px;
-    }
+  .user-role {
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 8px;
+    padding-bottom: 24px;
+    margin: 0px;
+  }
 
-    .home-tiles{
-        margin-bottom: 30px;
+  .home-tiles {
+    margin-bottom: 30px;
 
-        .home-tile-format{
-            padding-left: 10px;
-            padding-right: 10px;
-            margin-top: 10px;
-            
-            .home-card-view{
-                box-sizing: border-box;
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.451);
-                border: 1px solid #E3E3E3;
-                height: 100%;
-                padding-left: 15px;
+    .home-tile-format {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 10px;
 
-                h2{
-                    font-weight: 700;
-                }
+      .home-card-view {
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.451);
+        border: 1px solid #e3e3e3;
+        height: 100%;
+        padding-left: 15px;
 
-                h3{
-                    font-weight: 500;
-                }
-            }
+        h2 {
+          font-weight: 700;
         }
+
+        h3 {
+          font-weight: 500;
+        }
+
+        .home-item-description {
+          overflow: hidden;
+          position: relative;
+          line-height: 1.2em;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+        }
+      }
     }
+  }
 }

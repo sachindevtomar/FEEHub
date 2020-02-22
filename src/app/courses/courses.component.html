@@ -1,0 +1,75 @@
+<div class="container">
+  <main role="main" id="courses-main-content-container">
+    <h1>Courses Catalog</h1>
+    <p>The skills required to advance your career nand earn your spot at the top do not come easily. Gain today's cloud
+      techincal skills with latest courses.
+    </p>
+    <div id="courses-search-box">
+      <input type="text" placeholder="Search for a course" [(ngModel)] = "courseSearchText" aria-label="Search" id="courses-search-inputbox">
+      <button class="glyphicon glyphicon-search" title="search button" id="courses-search-btn">
+        <span class="x-screen-reader"></span>
+      </button>
+    </div>
+
+    <div class="course-main-section">
+
+      <!-- Filter section -->
+      <div class="col-sm-4 col-md-3">
+        <aside>
+          <div class="row courses-filter-container">
+            <h2>Filters</h2>
+            <div class="courses-menu-list">
+              <ul class="courses-mainmenu-list">
+                <li>
+                  <button class="dropdown-toggle courses-btn" data-toggle="collapse" data-target="#collapse-course-menu"
+                    aria-expanded="true" aria-controls="collapse-course-menu">
+                    Course</button>
+                  <ul class="collapse  multi-collapse" id="collapse-course-menu">
+                    <li><button class="courses-btn courses-btn-checkbox" role="checkbox">Course 1</button></li>
+                    <li><button class="courses-btn courses-btn-checkbox" role="checkbox"><span>Course 2</span></button>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <button class="dropdown-toggle courses-btn" data-toggle="collapse"
+                    data-target="#collapse-duration-menu" aria-expanded="true" aria-controls="collapse-duration-menu">
+                    Duration</button>
+                  <ul class="collapse  multi-collapse" id="collapse-duration-menu">
+                    <li><button class="courses-btn courses-btn-checkbox" role="checkbox"><span>Duration
+                          1</span></button></li>
+                    <li><button class="courses-btn courses-btn-checkbox" role="checkbox"><span>Duration
+                          2</span></button></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Course display section with pagination -->
+      <div class="col-sm-8 col-md-9">
+        <section>
+          <div class="row courses-information-container">
+            <h2>Courses</h2>
+            <div class="courses-cards-div">
+              <div class="courses-card card">
+                <div class="courses-card-body card-body">
+                  <div class="course-card-each-item" *ngFor="let course of pagedItems| coursesFilter: courseSearchText">
+                    <h3 class="courses-card-title card-title">{{course.courseName}}</h3>
+                    <p class="courses-card-text card-text">
+                      {{course.courseDescription}}
+                    </p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <jw-pagination [items]="courses" (changePage)="beginPagination($event)" pageSize="5"></jw-pagination>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
