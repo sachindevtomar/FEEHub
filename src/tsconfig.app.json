@@ -7,5 +7,7 @@
   "exclude": [
     "test.ts",
     "**/*.spec.ts"
+    // "./components/**/*.module.ts",
+    // "./components/**/*.route.ts",
   ]
 }
