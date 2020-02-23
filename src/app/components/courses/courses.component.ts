@@ -11,15 +11,18 @@ export class CoursesComponent implements OnInit {
   
   title = 'custom-pagination-angular'; 
   pagedItems: Array<any>;  
-  courses = [];
+  coursesAll: Course[] = null;
+  filteredCourses: Course[] = null;
   public courseSearchText: string = "";
   public technologyTags : string[] = [];
   public courseFilterShowMore: boolean = true;
   public courseShowMoreLessButton: boolean = false; 
+  public selectedTags: string[] =[];
+
   constructor() { }
 
   ngOnInit() {
-    this.courses = COURSES;
+    this.filteredCourses = this.coursesAll = COURSES;
     this.collectAllTags();    
   }
 
@@ -50,6 +53,21 @@ export class CoursesComponent implements OnInit {
 
   showMoreLessbutton(){
     this.courseShowMoreLessButton = ! this.courseShowMoreLessButton;
+  }
+
+  filterCoursesUsingTags(technology){
+
+    if(this.selectedTags.includes(technology))
+      this.selectedTags = this.selectedTags.filter(x=> x!=technology);
+    else
+      this.selectedTags.push(technology);
+
+    if(this.selectedTags.length == 0){
+      this.filteredCourses = this.coursesAll;
+      return;
+    }
+    
+    this.filteredCourses = this.coursesAll.filter(x=> x.tags.some(s => this.selectedTags.includes(s)));
   }
 
 }
