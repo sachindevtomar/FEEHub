@@ -17,21 +17,20 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
 
 import { AppRoutingModule } from "./app-routing/app-routing.module";
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './components/login/login.component';
 
 import { AuthenticationBackendProvider } from "./_helpers";
 import { JwtInterceptor } from "./_helpers/jwt.interceptor";
 import { ErrorInterceptor } from "./_helpers/error.interceptor";
-import { FeaturesComponent } from './features/features.component';
+import { FeaturesComponent } from './components/features/features.component';
 import { FeaturesFilterPipe } from './pipes/featuresfilter.pipe';
-import { AddFeatureModalComponent } from './add-feature-modal/add-feature-modal.component';
-import { CoursesComponent } from './courses/courses.component';
+import { AddFeatureModalComponent } from './components/add-feature-modal/add-feature-modal.component';
+import { CoursesComponent } from './components/courses/courses.component';
 import { JwPaginationComponent } from 'jw-angular-pagination';
 import { CoursesFilterPipe } from './pipes/coursesfilter.pipe';
 
@@ -42,7 +41,6 @@ import { CoursesFilterPipe } from './pipes/coursesfilter.pipe';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ContactComponent,
     LoginComponent,
     FeaturesComponent,
     FeaturesFilterPipe,

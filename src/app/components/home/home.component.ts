@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Course } from "../models/course";
-import { COURSES } from "../Shared/courses";
-import { Feature } from "../models/feature";
-import { FEATURES } from "../Shared/features";
-import { AuthenticationService } from "../services/authentication.service";
+import { Course } from "../../models/course";
+import { COURSES } from "../../Shared/courses";
+import { Feature } from "../../models/feature";
+import { FEATURES } from "../../Shared/features";
+import { AuthenticationService } from "../../services/authentication.service";
 
 @Component({
   selector: 'app-home',
