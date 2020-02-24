@@ -157,18 +157,51 @@ $primary-color:        #673AB7;
 
           .course-card-each-item {
             padding: 10px;
-
+            height: auto;
             .courses-card-title {
             }
 
             .courses-card-text {
             }
+            
+            .course-information-courseTag-div{
+              background-color: $background-darkRed;
+              color: white;
+              margin-right: 5px;
+              word-wrap: break-word;
+              font-size: 10px;
+              margin-bottom: 0px;
+              border-radius: 10px;
+              text-align: center;
+
+              .course-information-courseTag-p{
+                margin: 2px;
+              }
+            }
+
+            .course-information-duration-div{
+              background-color: $background-darkRed;
+              color: white;
+              margin-right: 5px;
+              word-wrap: break-word;
+              font-size: 10px;
+              margin-bottom: 0px;
+              border-radius: 10px;
+              text-align: center;
+              padding-bottom: -10px;
+
+              .course-information-duretion-p{
+                margin: 2px;
+              }
+            }
+
           }
 
           .course-card-each-item:hover {
             padding: 11px;
             box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
           }
+
         }
       }
     }
