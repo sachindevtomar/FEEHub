@@ -12,7 +12,8 @@ export class CoursesComponent implements OnInit {
   title = 'custom-pagination-angular';
   pagedItems: Array<any>;
   coursesAll: Course[] = null;
-  filteredCourses: Course[] = null;
+  filteredCoursesByTags: Course[] = null;
+  filteredCoursesByDuration: Course[] = null;
   public courseSearchText: string = "";
   public technologyTags: string[] = [];
   public courseFilterShowMore: boolean = true;
@@ -24,9 +25,10 @@ export class CoursesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.filteredCourses = this.coursesAll = COURSES;
+    this.filteredCoursesByTags = this.coursesAll = COURSES;
     this.collectAllTags();
     this.maxDuration = Math.max.apply(Math, COURSES.map(function(o) { return o.duration; }));
+    this.filteredCoursesByDuration = this.coursesAll = COURSES;
   }
 
   beginPagination(pagedItems: Array<any>) {
@@ -66,14 +68,18 @@ export class CoursesComponent implements OnInit {
       this.selectedTags.push(technology);
 
     if (this.selectedTags.length == 0) {
-      this.filteredCourses = this.coursesAll;
+      this.filteredCoursesByTags = this.coursesAll;
       return;
     }
 
-    this.filteredCourses = this.coursesAll.filter(x => x.tags.some(s => this.selectedTags.includes(s)));
+    this.filteredCoursesByTags = this.coursesAll.filter(x => x.tags.some(s => this.selectedTags.includes(s)));
   }
   
   filterCoursesUsingDuration(){
-    console.log((<HTMLInputElement>document.getElementById("courses-filter-duration-slider")).value);
+
+    let durationSliderValue = Number((<HTMLInputElement>document.getElementById("courses-filter-duration-slider")).value);
+    this.filteredCoursesByDuration = this.coursesAll.filter(x=> x.duration<=durationSliderValue);
+    console.log(this.filteredCoursesByDuration);
+    
   }
 }
