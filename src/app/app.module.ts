@@ -1,16 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {FlexLayoutModule} from '@angular/flex-layout';
-import { MatListModule } from '@angular/material/list';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import {MatDialogModule} from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -19,53 +10,28 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HomeComponent } from './components/home/home.component';
 
 import { AppRoutingModule } from "./app-routing/app-routing.module";
-import { LoginComponent } from './components/login/login.component';
 
 import { AuthenticationBackendProvider } from "./_helpers";
 import { JwtInterceptor } from "./_helpers/jwt.interceptor";
 import { ErrorInterceptor } from "./_helpers/error.interceptor";
-import { FeaturesComponent } from './components/features/features.component';
-import { FeaturesFilterPipe } from './pipes/featuresfilter.pipe';
-import { AddFeatureModalComponent } from './components/add-feature-modal/add-feature-modal.component';
-import { CoursesComponent } from './components/courses/courses.component';
-import { JwPaginationComponent } from 'jw-angular-pagination';
-import { CoursesFilterPipe } from './pipes/coursesfilter.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    LoginComponent,
-    FeaturesComponent,
-    FeaturesFilterPipe,
-    AddFeatureModalComponent,
-    CoursesComponent,
-    CoursesFilterPipe,
-    JwPaginationComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    FlexLayoutModule,
-    MatListModule,
-    MatGridListModule,
-    MatCardModule,
-    MatButtonModule,
     AppRoutingModule,
-    MatDialogModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
     MatFormFieldModule, 
-    MatInputModule,
-    MatCheckboxModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    ReactiveFormsModule
   ],
   providers: [
     AuthenticationBackendProvider,
