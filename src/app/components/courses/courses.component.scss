@@ -172,5 +172,10 @@ $primary-color:        #673AB7;
         }
       }
     }
+
+    .course-information-empy-result-message{
+      color: $background-darkRed;
+      text-align: center;
+    }
   }
 }

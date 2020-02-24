@@ -70,7 +70,9 @@
         <section>
           <div class="row courses-information-container">
             <h2>Courses</h2>
-            <div class="courses-cards-div">
+            
+            <!-- Course data will be shown if there is item available after applying filter -->
+            <div class="courses-cards-div" *ngIf="getCommonCoursesAfterFilter().length != 0">
               <div class="courses-card card">
                 <div class="courses-card-body card-body">
                   <div class="course-card-each-item" *ngFor="let course of pagedItems| coursesFilter: courseSearchText">
@@ -85,6 +87,14 @@
                 </div>
               </div>
             </div>
+
+            <!-- No course data available message will be shown for zero filtered result -->
+            <div class="course-information-empy-result-message" *ngIf="getCommonCoursesAfterFilter().length == 0">
+              <p>
+                <b>No course data available. Please update your filter.</b>
+              </p>
+            </div>
+
           </div>
         </section>
       </div>
