@@ -28,7 +28,7 @@
                   <ul class="collapse  multi-collapse" id="collapse-course-menu">
                     <li *ngFor="let technology of technologyTags" class="courses-technology-tags">
                       <button class="courses-btn courses-technology-btn">{{technology}}
-                        <input type="checkbox" class="courses-btn-checkbox" />
+                        <input type="checkbox" class="courses-btn-checkbox" (change)="filterCoursesUsingTags(technology)"/>
                       </button>
                     </li>
                   </ul>
@@ -68,7 +68,7 @@
                   </div>
                 </div>
                 <div class="card-footer">
-                  <jw-pagination [items]="courses" (changePage)="beginPagination($event)" pageSize="5"></jw-pagination>
+                  <jw-pagination [items]="filteredCourses" (changePage)="beginPagination($event)" pageSize="5"></jw-pagination>
                 </div>
               </div>
             </div>
