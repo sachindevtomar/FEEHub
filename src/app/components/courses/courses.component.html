@@ -40,10 +40,14 @@
                     data-target="#collapse-duration-menu" aria-expanded="true" aria-controls="collapse-duration-menu">
                     Duration</button>
                   <ul class="collapse  multi-collapse" id="collapse-duration-menu">
-                    <li><button class="courses-btn courses-technology-btn" role="checkbox"><span>Duration
+                    <li class="slidecontainer">
+                      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                      <p>Value: <span id="demo"></span></p>
+                    </li>
+                    <!-- <li><button class="courses-btn courses-technology-btn" role="checkbox"><span>Duration
                           1</span></button></li>
                     <li><button class="courses-btn courses-technology-btn" role="checkbox"><span>Duration
-                          2</span></button></li>
+                          2</span></button></li> -->
                   </ul>
                 </li>
               </ul>
