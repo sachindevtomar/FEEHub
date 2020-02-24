@@ -67,7 +67,7 @@
                   </div>
                 </div>
                 <div class="card-footer">
-                  <jw-pagination [items]="filteredCoursesByTags" (changePage)="beginPagination($event)" pageSize="5"></jw-pagination>
+                  <jw-pagination [items]="getCommonCoursesAfterFilter()" (changePage)="beginPagination($event)" pageSize="5"></jw-pagination>
                 </div>
               </div>
             </div>

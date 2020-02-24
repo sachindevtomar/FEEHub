@@ -25,17 +25,16 @@ export class CoursesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.filteredCoursesByTags = this.coursesAll = COURSES;
+    this.filteredCoursesByDuration = this.filteredCoursesByTags = this.coursesAll = COURSES;
     this.collectAllTags();
     this.maxDuration = Math.max.apply(Math, COURSES.map(function(o) { return o.duration; }));
-    this.filteredCoursesByDuration = this.coursesAll = COURSES;
   }
 
   beginPagination(pagedItems: Array<any>) {
     this.pagedItems = pagedItems;
   }
 
-  collectAllTags() {
+  public collectAllTags() {
     for (var i = 0, j = 0; i < COURSES.length; i++) {
       for (var k = 0; k < COURSES[i].tags.length; k++)
         this.technologyTags[j++] = COURSES[i].tags[k];
@@ -46,21 +45,21 @@ export class CoursesComponent implements OnInit {
     this.technologyTags = this.technologyTags.sort();
   }
 
-  showMoreTechnologies() {
+  public showMoreTechnologies() {
     this.courseFilterShowMore = !this.courseFilterShowMore;
     document.getElementById('collapse-course-menu').style.maxHeight = "initial";
   }
 
-  showLessTechnologies() {
+  public showLessTechnologies() {
     this.courseFilterShowMore = !this.courseFilterShowMore;
     document.getElementById('collapse-course-menu').style.maxHeight = "300px";
   }
 
-  showMoreLessbutton() {
+  public showMoreLessbutton() {
     this.courseShowMoreLessButton = !this.courseShowMoreLessButton;
   }
 
-  filterCoursesUsingTags(technology) {
+  public filterCoursesUsingTags(technology) {
 
     if (this.selectedTags.includes(technology))
       this.selectedTags = this.selectedTags.filter(x => x != technology);
@@ -75,11 +74,15 @@ export class CoursesComponent implements OnInit {
     this.filteredCoursesByTags = this.coursesAll.filter(x => x.tags.some(s => this.selectedTags.includes(s)));
   }
   
-  filterCoursesUsingDuration(){
+  public filterCoursesUsingDuration(){
 
     let durationSliderValue = Number((<HTMLInputElement>document.getElementById("courses-filter-duration-slider")).value);
-    this.filteredCoursesByDuration = this.coursesAll.filter(x=> x.duration<=durationSliderValue);
+    this.filteredCoursesByDuration = this.coursesAll.filter(x=> x.duration <= durationSliderValue);
     console.log(this.filteredCoursesByDuration);
     
+  }
+
+  public getCommonCoursesAfterFilter(){
+    return this.filteredCoursesByTags.filter(o => this.filteredCoursesByDuration.some(s => o.id === s.id));
   }
 }
