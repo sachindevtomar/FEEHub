@@ -1,7 +1,7 @@
 <div class="container">
   <main role="main" id="courses-main-content-container">
     <h1>Courses Catalog</h1>
-    <p>The skills required to advance your career nand earn your spot at the top do not come easily. Gain today's cloud
+    <p>The skills required to advance your career and earn your spot at the top do not come easily. Gain today's cloud
       techincal skills with latest courses.
     </p>
     <div id="courses-search-box">
@@ -41,13 +41,8 @@
                     Duration</button>
                   <ul class="collapse  multi-collapse" id="collapse-duration-menu">
                     <li class="slidecontainer">
-                      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                      <p>Value: <span id="demo"></span></p>
+                      <input type="range" min="0" max="{{maxDuration}}" value="5" class="slider" id="courses-filter-duration-slider" (change)="filterCoursesUsingDuration()">
                     </li>
-                    <!-- <li><button class="courses-btn courses-technology-btn" role="checkbox"><span>Duration
-                          1</span></button></li>
-                    <li><button class="courses-btn courses-technology-btn" role="checkbox"><span>Duration
-                          2</span></button></li> -->
                   </ul>
                 </li>
               </ul>
