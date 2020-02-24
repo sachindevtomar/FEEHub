@@ -24,24 +24,34 @@
                 <li>
                   <button class="dropdown-toggle courses-btn" data-toggle="collapse" data-target="#collapse-course-menu"
                     aria-expanded="true" aria-controls="collapse-course-menu" (click)="showMoreLessbutton()">
-                    Technology</button>
+                    Technology
+                  </button>
                   <ul class="collapse  multi-collapse" id="collapse-course-menu">
                     <li *ngFor="let technology of technologyTags" class="courses-technology-tags">
-                      <button class="courses-btn courses-technology-btn">{{technology}}
-                        <input type="checkbox" class="courses-btn-checkbox" (change)="filterCoursesUsingTags(technology)"/>
-                      </button>
+                      <p class="courses-filter-technology-tags-p">{{technology}}
+                        <input type="checkbox" class="courses-filter-technology-checkbox" (change)="filterCoursesUsingTags(technology)"/>
+                      </p>
                     </li>
                   </ul>
-                  <div class="courses-viewmore-btn" id="collapse-course-viewmore" (click)="showMoreTechnologies()" *ngIf="courseFilterShowMore && courseShowMoreLessButton">View more</div>
-                  <div class="courses-viewmore-btn" id="collapse-course-viewless" (click)="showLessTechnologies()" *ngIf="!courseFilterShowMore && courseShowMoreLessButton">View less</div>
+                  <div class="courses-viewmore-btn" id="collapse-course-viewmore" (click)="showMoreTechnologies()" 
+                  *ngIf="courseFilterShowMore && courseShowMoreLessButton"><b>View more</b></div>
+                  <div class="courses-viewmore-btn" id="collapse-course-viewless" (click)="showLessTechnologies()" 
+                  *ngIf="!courseFilterShowMore && courseShowMoreLessButton"><b>View less</b></div>
                 </li>
                 <li>
                   <button class="dropdown-toggle courses-btn" data-toggle="collapse"
                     data-target="#collapse-duration-menu" aria-expanded="true" aria-controls="collapse-duration-menu">
-                    Duration</button>
+                    Duration
+                  </button>
                   <ul class="collapse  multi-collapse" id="collapse-duration-menu">
                     <li class="slidecontainer">
                       <input type="range" min="0" max="{{maxDuration}}" value="{{maxDuration}}" class="slider" id="courses-filter-duration-slider" (change)="filterCoursesUsingDuration()">
+                    </li>
+                    <li>
+                      <div>
+                        <p id="course-filter-duration-min-value">0</p>
+                        <p id="course-filter-duration-max-value">{{maxDuration}}</p>
+                      </div>
                     </li>
                   </ul>
                 </li>
