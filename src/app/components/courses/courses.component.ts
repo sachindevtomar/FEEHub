@@ -20,14 +20,14 @@ export class CoursesComponent implements OnInit {
   public courseShowMoreLessButton: boolean = false;
   public selectedTags: string[] = [];
   public maxDuration: number = 0;
-  
+  public currentDurationSliderValue: number = 0;
 
   constructor() { }
 
   ngOnInit() {
     this.filteredCoursesByDuration = this.filteredCoursesByTags = this.coursesAll = COURSES;
     this.collectAllTags();
-    this.maxDuration = Math.max.apply(Math, COURSES.map(function(o) { return o.duration; }));
+    this.currentDurationSliderValue = this.maxDuration = Math.max.apply(Math, COURSES.map(function(o) { return o.duration; }));
   }
 
   beginPagination(pagedItems: Array<any>) {
@@ -76,8 +76,8 @@ export class CoursesComponent implements OnInit {
   
   public filterCoursesUsingDuration(){
 
-    let durationSliderValue = Number((<HTMLInputElement>document.getElementById("courses-filter-duration-slider")).value);
-    this.filteredCoursesByDuration = this.coursesAll.filter(x=> x.duration <= durationSliderValue);
+    this.currentDurationSliderValue = Number((<HTMLInputElement>document.getElementById("courses-filter-duration-slider")).value);
+    this.filteredCoursesByDuration = this.coursesAll.filter(x=> x.duration <= this.currentDurationSliderValue);
     console.log(this.filteredCoursesByDuration);
     
   }
