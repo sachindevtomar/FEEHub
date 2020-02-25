@@ -60,7 +60,7 @@ $primary-color: #673ab7;
           cursor: pointer;
 
           &:hover {
-            text-shadow: 0 0 3px #b92026;
+            text-shadow: 0 0 1px #b92026;
           }
         }
 
@@ -219,7 +219,6 @@ $primary-color: #673ab7;
           }
 
           .course-card-each-item:hover {
-            padding: 11px;
             box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
           }
         }

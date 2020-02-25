@@ -49,12 +49,15 @@ export class CoursesComponent implements OnInit {
 
   public showMoreTechnologies() {
     this.courseFilterShowMore = !this.courseFilterShowMore;
-    document.getElementById('courses-filter-technology').style.maxHeight = "initial";
+    document.getElementById('courses-filter-technology').style.maxHeight = "400px";
+    document.getElementById('courses-filter-technology').style.overflowY = "scroll";
+
   }
 
   public showLessTechnologies() {
     this.courseFilterShowMore = !this.courseFilterShowMore;
-    document.getElementById('courses-filter-technology').style.maxHeight = "300px";
+    document.getElementById('courses-filter-technology').style.maxHeight = "200px";
+    document.getElementById('courses-filter-technology').style.overflow = "hidden";
   }
 
   public showMoreLessbutton() {
