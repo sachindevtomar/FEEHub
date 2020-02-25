@@ -1,3 +1,9 @@
+//colors
+$background-darkRed: #B92026;
+$background-dark: #512DA8;
+$primary-color-dark:   #512DA8;
+$primary-color:        #673AB7;
+
 .container {
   h1 {
     font-size: 46px;
@@ -41,13 +47,28 @@
       margin-top: 10px;
       width: 90%;
 
-      .courses-mainmenu-list{
-        background-color: rgb(240, 240, 240);
+      .courses-mainmenu-list {
+        background-color:  rgba(185, 32, 38, 0.1);
 
-        .courses-viewmore-btn{
-          padding-top: 15px;
-          padding-left: 15px;
+        .courses-viewmore-btn {
+          padding: 15px;
         }
+
+        #course-filter-duration-min-value{
+          float: left;
+          margin-left: 10px;
+        }
+
+        #course-filter-duration-max-value{
+          float: right;
+          margin-right: 10px;
+        }
+
+        #course-filter-duration-status-text{
+          width: 100%;
+          text-align: center;
+        }
+
       }
 
       ul {
@@ -55,20 +76,11 @@
         padding: 0;
 
         .courses-btn {
-          font-size: 20px;
+          font-size: 23px;
+          padding-bottom: 15px;
+          padding-top: 10px;
           line-height: 26px;
-          word-wrap: break-word;
-          background: transparent;
-          padding: 14px 12px 14px 36px;
-          position: relative;
-          border: 2px solid transparent;
-          outline: 1px solid transparent;
-          outline-offset: -3px;
-          display: block;
-          background: #f0f0f0;
           color: rgba(0, 0, 0, 0.8);
-          font-weight: 400;
-          left: 0;
           text-align: left;
           width: 100%;
         }
@@ -77,15 +89,57 @@
       #collapse-course-menu {
         max-height: 300px;
         overflow: hidden;
+        padding-top: 10px;
 
-        .courses-technology-btn {
+        .courses-filter-technology-tags-p {
           font-size: small;
-          margin-bottom: -20px;
+          margin-bottom: 15px;
           padding-left: 15px;
 
-          .courses-btn-checkbox {
+          .courses-filter-technology-checkbox {
             float: right;
+            margin-right: 10px;
           }
+        }
+      }
+
+      .slidecontainer {
+        width: 100%;
+        margin-top: 5px;
+        padding: 10px;
+
+        .slider {
+          -webkit-appearance: none;
+          width: 100%;
+          height: 10px;
+          border-radius: 5px;
+          background: $background-dark;
+          outline: none;
+          opacity: 0.6;
+          -webkit-transition: 0.2s;
+          transition: opacity 0.2s;
+        }
+
+        .slider:hover {
+          opacity: 0.8;
+        }
+
+        .slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: $background-darkRed;
+          cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: $background-darkRed;
+          cursor: pointer;
         }
       }
     }
@@ -103,20 +157,58 @@
 
           .course-card-each-item {
             padding: 10px;
-
+            height: auto;
             .courses-card-title {
             }
 
             .courses-card-text {
             }
+            
+            .course-information-courseTag-div{
+              background-color: $background-darkRed;
+              color: white;
+              margin-right: 5px;
+              word-wrap: break-word;
+              font-size: 10px;
+              margin-bottom: 0px;
+              border-radius: 10px;
+              text-align: center;
+
+              .course-information-courseTag-p{
+                margin: 2px;
+              }
+            }
+
+            .course-information-duration-div{
+              background-color: $background-darkRed;
+              color: white;
+              margin-right: 5px;
+              word-wrap: break-word;
+              font-size: 10px;
+              margin-bottom: 0px;
+              border-radius: 10px;
+              text-align: center;
+              padding-bottom: -10px;
+
+              .course-information-duretion-p{
+                margin: 2px;
+              }
+            }
+
           }
 
           .course-card-each-item:hover {
             padding: 11px;
             box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
           }
+
         }
       }
+    }
+
+    .course-information-empy-result-message{
+      color: $background-darkRed;
+      text-align: center;
     }
   }
 }

@@ -1,7 +1,7 @@
 <div class="container">
   <main role="main" id="courses-main-content-container">
     <h1>Courses Catalog</h1>
-    <p>The skills required to advance your career nand earn your spot at the top do not come easily. Gain today's cloud
+    <p>The skills required to advance your career and earn your spot at the top do not come easily. Gain today's cloud
       techincal skills with latest courses.
     </p>
     <div id="courses-search-box">
@@ -24,26 +24,39 @@
                 <li>
                   <button class="dropdown-toggle courses-btn" data-toggle="collapse" data-target="#collapse-course-menu"
                     aria-expanded="true" aria-controls="collapse-course-menu" (click)="showMoreLessbutton()">
-                    Technology</button>
+                    Technology
+                  </button>
                   <ul class="collapse  multi-collapse" id="collapse-course-menu">
                     <li *ngFor="let technology of technologyTags" class="courses-technology-tags">
-                      <button class="courses-btn courses-technology-btn">{{technology}}
-                        <input type="checkbox" class="courses-btn-checkbox" (change)="filterCoursesUsingTags(technology)"/>
-                      </button>
+                      <p class="courses-filter-technology-tags-p">{{technology}}
+                        <input type="checkbox" class="courses-filter-technology-checkbox" (change)="filterCoursesUsingTags(technology)"/>
+                      </p>
                     </li>
                   </ul>
-                  <div class="courses-viewmore-btn" id="collapse-course-viewmore" (click)="showMoreTechnologies()" *ngIf="courseFilterShowMore && courseShowMoreLessButton">View more</div>
-                  <div class="courses-viewmore-btn" id="collapse-course-viewless" (click)="showLessTechnologies()" *ngIf="!courseFilterShowMore && courseShowMoreLessButton">View less</div>
+                  <div class="courses-viewmore-btn" id="collapse-course-viewmore" (click)="showMoreTechnologies()" 
+                  *ngIf="courseFilterShowMore && courseShowMoreLessButton"><b>View more</b></div>
+                  <div class="courses-viewmore-btn" id="collapse-course-viewless" (click)="showLessTechnologies()" 
+                  *ngIf="!courseFilterShowMore && courseShowMoreLessButton"><b>View less</b></div>
                 </li>
                 <li>
                   <button class="dropdown-toggle courses-btn" data-toggle="collapse"
                     data-target="#collapse-duration-menu" aria-expanded="true" aria-controls="collapse-duration-menu">
-                    Duration</button>
+                    Duration
+                  </button>
                   <ul class="collapse  multi-collapse" id="collapse-duration-menu">
-                    <li><button class="courses-btn courses-technology-btn" role="checkbox"><span>Duration
-                          1</span></button></li>
-                    <li><button class="courses-btn courses-technology-btn" role="checkbox"><span>Duration
-                          2</span></button></li>
+                    <li class="slidecontainer">
+                      <input type="range" min="0" max="{{maxDuration}}" value="{{maxDuration}}" class="slider" id="courses-filter-duration-slider" (change)="filterCoursesUsingDuration()">
+                    </li>
+                    <li>
+                      <div>
+                        <p id="course-filter-duration-min-value">0</p>
+                        <p id="course-filter-duration-max-value">{{maxDuration}}</p>
+                      </div>
+                    </li>
+                    <br>
+                    <li id="course-filter-duration-status-text">
+                      <p><b>Filter is applied for 0 to {{currentDurationSliderValue}} months</b></p>
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -57,21 +70,42 @@
         <section>
           <div class="row courses-information-container">
             <h2>Courses</h2>
-            <div class="courses-cards-div">
+            
+            <!-- Course data will be shown if there is item available after applying filter -->
+            <div class="courses-cards-div" *ngIf="getCommonCoursesAfterFilter().length != 0">
               <div class="courses-card card">
-                <div class="courses-card-body card-body">
-                  <div class="course-card-each-item" *ngFor="let course of pagedItems| coursesFilter: courseSearchText">
+                <div class="courses-card-body card-body row">
+                  <div class="course-card-each-item col-xs-12 col-sm-12 col-md-12" *ngFor="let course of pagedItems| coursesFilter: courseSearchText">
                     <h3 class="courses-card-title card-title">{{course.courseName}}</h3>
                     <p class="courses-card-text card-text">
                       {{course.courseDescription}}
                     </p>
+                    <!-- Tags for each course -->
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                      <div class="col-xs-3 col-sm-3 col-md-1 course-information-courseTag-div" *ngFor="let courseTag of course.tags">
+                          <p class="course-information-courseTag-p">{{courseTag}}</p>
+                      </div>
+                    </div>
+
+                    <!-- <div class="col-xs-12 col-sm-3 col-md-1 course-information-duration-div">
+                      <p class="course-information-duretion-p">{{course.duration}}</p>
+                    </div> -->
+
                   </div>
                 </div>
                 <div class="card-footer">
-                  <jw-pagination [items]="filteredCourses" (changePage)="beginPagination($event)" pageSize="5"></jw-pagination>
+                  <jw-pagination [items]="getCommonCoursesAfterFilter()" (changePage)="beginPagination($event)" pageSize="5"></jw-pagination>
                 </div>
               </div>
             </div>
+
+            <!-- No course data available message will be shown for zero filtered result -->
+            <div class="course-information-empy-result-message" *ngIf="getCommonCoursesAfterFilter().length == 0">
+              <p>
+                <b>No course data available. Please update your filter.</b>
+              </p>
+            </div>
+
           </div>
         </section>
       </div>
