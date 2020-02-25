@@ -78,7 +78,7 @@
             <h2>Courses</h2>
 
             <!-- Course data will be shown if there is item available after applying filter -->
-            <div class="courses-cards-div" *ngIf="getCommonCoursesAfterFilter().length != 0">
+            <div class="courses-cards-div" *ngIf="finalFilteredCourses.length != 0">
               <div class="courses-card card">
                 <div class="courses-card-body card-body row">
                   <div class="course-card-each-item col-xs-12 col-sm-12 col-md-12"
@@ -102,14 +102,14 @@
                   </div>
                 </div>
                 <div class="card-footer">
-                  <jw-pagination [items]="getCommonCoursesAfterFilter()" (changePage)="beginPagination($event)"
+                  <jw-pagination [items]="finalFilteredCourses" (changePage)="beginPagination($event)"
                     pageSize="5"></jw-pagination>
                 </div>
               </div>
             </div>
 
             <!-- No course data available message will be shown for zero filtered result -->
-            <div class="course-information-empy-result-message" *ngIf="getCommonCoursesAfterFilter().length == 0">
+            <div class="course-information-empy-result-message" *ngIf="finalFilteredCourses.length == 0">
               <p>
                 <b>No course data available. Please update your filter.</b>
               </p>
