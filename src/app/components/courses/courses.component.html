@@ -33,7 +33,7 @@
                       <label class="courses-filter-technology-tags-p" for="{{technology}}">{{technology}}
                         <input type="checkbox" class="courses-filter-technology-checkbox" id="{{technology}}"
                           (change)="filterCoursesUsingTags(technology)" />
-                          <span class="courses-filter-technology-checkbox-span"></span>
+                        <span class="courses-filter-technology-checkbox-span"></span>
                       </label>
                     </li>
                   </ul>
@@ -83,7 +83,12 @@
                 <div class="courses-card-body card-body row">
                   <div class="course-card-each-item col-xs-12 col-sm-12 col-md-12"
                     *ngFor="let course of pagedItems| coursesFilter: courseSearchText">
-                    <h3 class="courses-card-title card-title">{{course.courseName}}</h3>
+                    <div class="row">
+                      <h3 class="courses-card-title card-title col-md-9">{{course.courseName}}</h3>
+                      <div class="col-md-3">
+                        <p class="course-information-duration-p">Duration: {{course.duration}} months</p>
+                      </div>
+                    </div>
                     <p class="courses-card-text card-text">
                       {{course.courseDescription}}
                     </p>
@@ -102,8 +107,8 @@
                   </div>
                 </div>
                 <div class="card-footer">
-                  <jw-pagination [items]="finalFilteredCourses" (changePage)="beginPagination($event)"
-                    pageSize="5"></jw-pagination>
+                  <jw-pagination [items]="finalFilteredCourses" (changePage)="beginPagination($event)" pageSize="5">
+                  </jw-pagination>
                 </div>
               </div>
             </div>
