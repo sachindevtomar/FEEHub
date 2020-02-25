@@ -1,5 +1,5 @@
 <div class="container">
-  <main role="main" id="courses-main-content-container">
+  <main id="courses-main-content-container">
     <h1>Courses Catalog</h1>
     <p>The skills required to advance your career and earn your spot at the top do not come easily. Gain today's cloud
       techincal skills with latest courses.
@@ -7,7 +7,7 @@
     <div id="courses-search-box">
       <input type="text" placeholder="Search for a course" [(ngModel)]="courseSearchText" aria-label="Search"
         id="courses-search-inputbox">
-      <button class="glyphicon glyphicon-search" title="search button" id="courses-search-btn">
+      <button role="search" class="glyphicon glyphicon-search" title="search button" id="courses-search-btn">
         <span class="x-screen-reader"></span>
       </button>
     </div>
@@ -16,7 +16,7 @@
 
       <!-- Filter section -->
       <div class="col-sm-4 col-md-3">
-        <aside>
+        <div>
           <div class="row courses-filter-container">
             <h2>Filters</h2>
             <div class="courses-menu-list">
@@ -28,9 +28,9 @@
                   </button>
                   <ul class="collapse  multi-collapse" id="collapse-course-menu">
                     <li *ngFor="let technology of technologyTags" class="courses-technology-tags">
-                      <p class="courses-filter-technology-tags-p">{{technology}}
-                        <input type="checkbox" class="courses-filter-technology-checkbox" (change)="filterCoursesUsingTags(technology)"/>
-                      </p>
+                      <label class="courses-filter-technology-tags-p" for="{{technology}}">{{technology}}
+                        <input type="checkbox" class="courses-filter-technology-checkbox" id="{{technology}}" (change)="filterCoursesUsingTags(technology)"/>
+                      </label>
                     </li>
                   </ul>
                   <div class="courses-viewmore-btn" id="collapse-course-viewmore" (click)="showMoreTechnologies()" 
@@ -45,16 +45,17 @@
                   </button>
                   <ul class="collapse  multi-collapse" id="collapse-duration-menu">
                     <li class="slidecontainer">
-                      <input type="range" min="0" max="{{maxDuration}}" value="{{maxDuration}}" class="slider" id="courses-filter-duration-slider" (change)="filterCoursesUsingDuration()">
+                      <input type="range" min="0" max="{{maxDuration}}" value="{{maxDuration}}" class="slider" 
+                      id="courses-filter-duration-slider" (change)="filterCoursesUsingDuration()" aria-label="Slider for duration filter">
                     </li>
                     <li>
                       <div>
                         <p id="course-filter-duration-min-value">0</p>
                         <p id="course-filter-duration-max-value">{{maxDuration}}</p>
                       </div>
-                    </li>
-                    <br>
+                    </li> 
                     <li id="course-filter-duration-status-text">
+                      <br>
                       <p><b>Filter is applied for 0 to {{currentDurationSliderValue}} months</b></p>
                     </li>
                   </ul>
@@ -62,12 +63,12 @@
               </ul>
             </div>
           </div>
-        </aside>
+        </div>
       </div>
 
       <!-- Course display section with pagination -->
       <div class="col-sm-8 col-md-9">
-        <section>
+        <section role="region">
           <div class="row courses-information-container">
             <h2>Courses</h2>
             
