@@ -98,6 +98,10 @@ $primary-color: #673ab7;
             border: 0;
             outline: 2px dashed #b92026;
           }
+
+          &:hover{
+           box-shadow: 0 0 4px;
+          }
         }
       }
 
@@ -112,6 +116,7 @@ $primary-color: #673ab7;
           padding-left: 15px;
           display: block;
           font-weight: 500;
+          cursor: pointer;
 
           .courses-filter-technology-checkbox {
             float: right;
