@@ -27,7 +27,7 @@ export class CoursesComponent implements OnInit {
   ngOnInit() {
     this.filteredCoursesByDuration = this.filteredCoursesByTags = this.coursesAll = COURSES;
     this.collectAllTags();
-    this.currentDurationSliderValue = this.maxDuration = Math.max.apply(Math, COURSES.map(function(o) { return o.duration; }));
+    this.currentDurationSliderValue = this.maxDuration = Math.max.apply(Math, COURSES.map(function (o) { return o.duration; }));
   }
 
   beginPagination(pagedItems: Array<any>) {
@@ -47,12 +47,12 @@ export class CoursesComponent implements OnInit {
 
   public showMoreTechnologies() {
     this.courseFilterShowMore = !this.courseFilterShowMore;
-    document.getElementById('collapse-course-menu').style.maxHeight = "initial";
+    document.getElementById('courses-filter-technology').style.maxHeight = "initial";
   }
 
   public showLessTechnologies() {
     this.courseFilterShowMore = !this.courseFilterShowMore;
-    document.getElementById('collapse-course-menu').style.maxHeight = "300px";
+    document.getElementById('courses-filter-technology').style.maxHeight = "300px";
   }
 
   public showMoreLessbutton() {
@@ -73,16 +73,16 @@ export class CoursesComponent implements OnInit {
 
     this.filteredCoursesByTags = this.coursesAll.filter(x => x.tags.some(s => this.selectedTags.includes(s)));
   }
-  
-  public filterCoursesUsingDuration(){
+
+  public filterCoursesUsingDuration() {
 
     this.currentDurationSliderValue = Number((<HTMLInputElement>document.getElementById("courses-filter-duration-slider")).value);
-    this.filteredCoursesByDuration = this.coursesAll.filter(x=> x.duration <= this.currentDurationSliderValue);
+    this.filteredCoursesByDuration = this.coursesAll.filter(x => x.duration <= this.currentDurationSliderValue);
     console.log(this.filteredCoursesByDuration);
-    
+
   }
 
-  public getCommonCoursesAfterFilter(){
+  public getCommonCoursesAfterFilter() {
     return this.filteredCoursesByTags.filter(o => this.filteredCoursesByDuration.some(s => o.id === s.id));
   }
 }
