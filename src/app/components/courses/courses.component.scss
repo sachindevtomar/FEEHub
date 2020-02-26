@@ -3,6 +3,7 @@ $background-darkRed: #b92026;
 $background-dark: #512da8;
 $primary-color-dark: #512da8;
 $primary-color: #673ab7;
+$lt-gray: #ddd;
 
 .container {
   h1 {
@@ -60,7 +61,7 @@ $primary-color: #673ab7;
           cursor: pointer;
 
           &:hover {
-            text-shadow: 0 0 3px #b92026;
+            text-shadow: 0 0 1px #b92026;
           }
         }
 
@@ -216,10 +217,19 @@ $primary-color: #673ab7;
                 margin: 2px;
               }
             }
+
+            .course-information-duration-p{
+              background-color: $lt-gray;
+              width: auto;
+              padding: 2px;
+              padding-left: 10px;
+              padding-right: 10px;
+              text-align: center;
+              border-radius: 3px;
+            }
           }
 
           .course-card-each-item:hover {
-            padding: 11px;
             box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
           }
         }
