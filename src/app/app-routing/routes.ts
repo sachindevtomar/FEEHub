@@ -23,6 +23,11 @@ export const routes: Routes = [
         canActivate: [AuthGuard]
     },
     {
+        path: 'editprofile', 
+        loadChildren: '../components/editprofile/editprofile.module#EditprofileModule',
+        canActivate: [AuthGuard]
+    },
+    {
         path: '', 
         redirectTo: '/home', 
         pathMatch:'full'

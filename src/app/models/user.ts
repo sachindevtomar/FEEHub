@@ -3,4 +3,5 @@ export class User{
     role: string;
     username: string;
     password: string;
+    claims: string[];
 }
