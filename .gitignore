@@ -27,6 +27,9 @@
 # IDE - VS
 .vs/*
 
+# Firebase : Hosting
+.firebase/*
+
 # misc
 /.sass-cache
 /connect.lock
