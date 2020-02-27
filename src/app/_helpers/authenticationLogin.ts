@@ -40,6 +40,8 @@ export class AuthenticationLoginInterceptor implements HttpInterceptor {
                 username: user.username,
                 name: user.name,
                 role: user.role,
+                emailid: user.emailid,
+                phoneNumber: user.phoneNumber,
                 token: 'fake-jwt-token'
             })
         }
