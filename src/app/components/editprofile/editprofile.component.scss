@@ -1,29 +1,45 @@
 //colors
 $background-darkRed: #b92026;
 
-.container{
-    .editprofile-page{
-
-        h1 {
-            font-size: 46px;
-            font-weight: 600;
-            line-height: 56px;
-          }
-
-        .editprofile-main-form{
-            margin-top: 50px;
-            margin-bottom: 30px;
-
-            .editprofile-main-form-input{
-                width: 100%;
-                padding: 2px;
-                margin-bottom: 12px;
-
-                &:focus{
-                    border: 0;
-                    outline: 2px dashed $background-darkRed;
-                }
-            }
-        }
+.container {
+  .editprofile-page {
+    h1 {
+      font-size: 46px;
+      font-weight: 600;
+      line-height: 56px;
     }
+
+    .editprofile-main-form {
+      margin-top: 50px;
+      margin-bottom: 30px;
+
+      .editprofile-main-form-input {
+        width: 100%;
+        padding: 2px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+
+        &:focus {
+          border: 0;
+          outline: 2px dashed $background-darkRed;
+        }
+      }
+    }
+
+    .editprofile-buttons {
+      margin-left: 30px;
+
+      .editprofile-button-save-cancel {
+        margin-bottom: 30px;
+        .editprofile-save {
+          margin-right: 10px;
+        }
+      }
+
+      .btn-primary {
+        height: 35px;
+        width: 125px;
+      }
+    }
+  }
 }
