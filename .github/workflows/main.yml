@@ -1,38 +1,25 @@
-name: CI
- 
-on: [push]
- 
+name: FEEHub Dev Build CI
+
+on:
+  push:
+    branches:
+    - master
+    - release/*
+
 jobs:
-  build:
- 
-    # using Ubuntu
+  firebase-deploy:
+
     runs-on: ubuntu-latest
- 
+
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1 #this installs node and npm for us
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@master
       with:
         node-version: '10.x'
- 
-    - uses: actions/cache@v1 # this allows for re-using node_modules caching, making builds a bit faster.
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
- 
     - run: npm install
-    - run: npm install -g @angular/cli > /dev/null
-    - run: ng build
- 
-    - name: copy file via ssh key
-      uses: appleboy/scp-action@master
-      env:
-        HOST: khophi.com
-        USERNAME: khophi
-        PORT: 22
-        KEY: ${{ secrets.forSSH }}
+    - run: npm run build
+    - uses: w9jds/firebase-action@master
       with:
-        source: "./dist/FEEHub/"
-        target: "/home/user/domain.com/pwa/"
-        strip_components: 3 # this is important
+        args: deploy --only hosting
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
