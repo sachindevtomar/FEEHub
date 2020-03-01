@@ -4,6 +4,7 @@ import { COURSES } from "../../Shared/courses";
 import { Feature } from "../../models/feature";
 import { FEATURES } from "../../Shared/features";
 import { AuthenticationService } from "../../services/authentication.service";
+import { HelperMethods } from '@app/_helpers/helper.methods';
 
 @Component({
   selector: 'app-home',
@@ -20,13 +21,15 @@ export class HomeComponent implements OnInit {
   currentUser = JSON.parse(localStorage.getItem('currentUser'));
   name = this.currentUser.name;
   role = this.currentUser.role;
-
   constructor(
-    private authenticationService: AuthenticationService) { }
+    private authenticationService: AuthenticationService,
+    public helperMethods: HelperMethods) {
+     }
 
   ngOnInit() {
+    
     // this.dish = this.dishservice.getFeaturedDish();
     // this.promotion = this.promotionservice.getFeaturedPromotion();
     // this.leader = this.leaderservice.getFeaturedLeader();
-  }  
+  } 
 }
