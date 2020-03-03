@@ -16,9 +16,11 @@ export class HomeComponent implements OnInit {
   // dish: Dish;
   // promotion: Promotion;
   // leader: Leader;
-  courses: Course[] = COURSES;
-  features: Feature[] = FEATURES;
-  currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  public courses: Course[] = COURSES;
+  public coursesWhenNoFeatureTile: Course[] = [];
+  public features: Feature[] = FEATURES;
+  public featuresWhenNoCourseTile: Feature[] = [];
+  public currentUser = JSON.parse(localStorage.getItem('currentUser'));
   name = this.currentUser.name;
   role = this.currentUser.role;
   constructor(
@@ -27,9 +29,25 @@ export class HomeComponent implements OnInit {
      }
 
   ngOnInit() {
-    
+
+    var Count = 0; 
+    this.courses.forEach(course => {
+      if(Count>=3)
+        this.coursesWhenNoFeatureTile.push(course);
+        Count++;
+    });
+    Count = 0;
+    this.features.forEach(feature => {
+      if(Count>=3)
+        this.featuresWhenNoCourseTile.push(feature);
+        Count++;
+    });
     // this.dish = this.dishservice.getFeaturedDish();
     // this.promotion = this.promotionservice.getFeaturedPromotion();
     // this.leader = this.leaderservice.getFeaturedLeader();
   } 
+
+  public CanViewBothCourseAndFeaturesTile(): boolean {
+    return this.helperMethods.userHasClaim("CanViewCourses") && this.helperMethods.userHasClaim("CanViewFeatures");
+  }
 }

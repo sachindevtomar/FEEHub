@@ -10,7 +10,6 @@ export class HelperMethods{
 
     public userHasClaim(claim: string): boolean{
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        console.log(this.currentUser);
         if(this.currentUser.claims.includes(claim))
             return true;
         return false;
