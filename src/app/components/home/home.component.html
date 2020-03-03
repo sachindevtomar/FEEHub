@@ -6,57 +6,65 @@
     </div>
 
     <div class="home-tiles row">
-      
+
       <div class="home-tile-format" *ngIf="helperMethods.userHasClaim('CanViewCourses')"
-      [ngClass]="CanViewBothCourseAndFeaturesTile()? 'col-md-6': 'col-md-12'">
+        [ngClass]="CanViewBothCourseAndFeaturesTile()? 'col-md-6': 'col-md-12'">
         <div id="home-courses-tile" class="home-card-view">
-          
+
           <h2 class="home-tile-item-icon glyphicon glyphicon-education"> Courses</h2>
           <div [ngClass]="CanViewBothCourseAndFeaturesTile()? 'col-md-12': 'col-md-6'">
-            <div *ngFor="let course of courses| slice:0:3" >
+            <div *ngFor="let course of courses| slice:0:3" class="home-courses-div">
               <h3>{{course.courseName}}</h3>
-              <p class="home-item-description">{{course.courseDescription}}</p>            
-              <span class="flex-spacer"></span><a href="{{course.courseDetailsPageLink}}" class="home-courses-tile-details-link">Details</a>
+              <p class="home-item-description">{{course.courseDescription}}</p>
+              <a href="{{course.courseDetailsPageLink}}" class="home-courses-tile-details-link home-btn">View Details
+                <span class="glyphicon glyphicon-play"></span>
+              </a>
             </div>
           </div>
           <div class="col-md-6" *ngIf="!helperMethods.userHasClaim('CanViewFeatures')">
-            <div *ngFor="let course of coursesWhenNoFeatureTile| slice:0:3">
+            <div *ngFor="let course of coursesWhenNoFeatureTile| slice:0:3" class="home-courses-div">
               <h3>{{course.courseName}}</h3>
-              <p class="home-item-description">{{course.courseDescription}}</p>            
-              <span class="flex-spacer"></span><a href="{{course.courseDetailsPageLink}}" class="home-courses-tile-details-link">Details</a>
+              <p class="home-item-description">{{course.courseDescription}}</p>
+              <a href="{{course.courseDetailsPageLink}}" class="home-courses-tile-details-link home-btn">View Details
+                <span class="glyphicon glyphicon-play"></span></a>
             </div>
           </div>
-          <div class="row">
-            <a routerLink='/courses' routerLinkActive="active" class="home-tiles-view-all-links"> View All</a>
+          <div class="home-seeallcoursesfeatures-link">
+            <a routerLink='/courses' routerLinkActive="active" class="home-tiles-view-all-links home-btn"> See All
+              Courses
+              <span class="glyphicon glyphicon-play"></span>
+            </a>
           </div>
         </div>
       </div>
 
-      <div class="home-tile-format" *ngIf="helperMethods.userHasClaim('CanViewFeatures')" 
-      [ngClass]="CanViewBothCourseAndFeaturesTile()? 'col-md-6': 'col-md-12'">
+      <div class="home-tile-format" *ngIf="helperMethods.userHasClaim('CanViewFeatures')"
+        [ngClass]="CanViewBothCourseAndFeaturesTile()? 'col-md-6': 'col-md-12'">
         <div id="home-features-tile" class="home-card-view">
-          
+
           <h2 class="home-tile-item-icon glyphicon glyphicon-flag"> Features</h2>
           <div [ngClass]="CanViewBothCourseAndFeaturesTile()? 'col-md-12': 'col-md-6'">
-            <div *ngFor="let feature of features| slice:0:3">
+            <div *ngFor="let feature of features| slice:0:3" class="home-feature-div">
               <h3>{{feature.Name}}</h3>
               <p>{{feature.Description}}</p>
             </div>
           </div>
           <div class="col-md-6" *ngIf="!helperMethods.userHasClaim('CanViewCourses')">
-            <div *ngFor="let feature of featuresWhenNoCourseTile| slice:0:3">
+            <div *ngFor="let feature of featuresWhenNoCourseTile| slice:0:3" class="home-feature-div">
               <h3>{{feature.Name}}</h3>
               <p>{{feature.Description}}</p>
             </div>
           </div>
-          <div class="row">
-            <a routerLink='/features' routerLinkActive="active" class="home-tiles-view-all-links"> View All</a>
+          <div class="home-seeallcoursesfeatures-link">
+            <a routerLink='/features' routerLinkActive="active" class="home-tiles-view-all-links home-btn"> See All
+              Features
+              <span class="glyphicon glyphicon-play"></span>
+            </a>
           </div>
         </div>
 
       </div>
-      
+
     </div>
   </main>
 </div>
-

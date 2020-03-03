@@ -36,6 +36,10 @@
           font-weight: 500;
         }
 
+        .home-courses-div {
+          margin-bottom: 20px;
+        }
+
         .home-item-description {
           overflow: hidden;
           position: relative;
@@ -44,20 +48,38 @@
           -webkit-box-orient: vertical;
           display: -webkit-box;
         }
-
-        .home-courses-tile-details-link{
-          float:right;
-          margin-right: 20px;
+        .home-seeallcoursesfeatures-link {
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        .home-courses-tile-details-link {
+          font-size: small;
         }
       }
 
-      .home-tile-item-icon{
+      .home-tile-item-icon {
         display: block;
       }
 
-      .home-tiles-view-all-links{
+      .home-tiles-view-all-links {
         margin: 10px;
         margin-left: 15px;
+      }
+
+      .home-feature-div {
+        margin-bottom: 82px;
+      }
+    }
+    .home-btn {
+      border: 0;
+      background-color: inherit;
+      color: black;
+      font-weight: 500;
+      font-size: 18px;
+
+      .glyphicon-play {
+        top: 2.5px;
+        color: #b92026;
       }
     }
   }
