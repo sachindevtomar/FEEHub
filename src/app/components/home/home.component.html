@@ -12,8 +12,8 @@
         <div id="home-courses-tile" class="home-card-view">
 
           <h2 class="home-tile-item-icon glyphicon glyphicon-education"> Courses</h2>
-          <div [ngClass]="CanViewBothCourseAndFeaturesTile()? 'col-md-12': 'col-md-6'" class="home-courses-div">
-            <div *ngFor="let course of courses| slice:0:3">
+          <div [ngClass]="CanViewBothCourseAndFeaturesTile()? 'col-md-12': 'col-md-6'">
+            <div *ngFor="let course of courses| slice:0:3" class="home-courses-div">
               <h3>{{course.courseName}}</h3>
               <p class="home-item-description">{{course.courseDescription}}</p>
               <a href="{{course.courseDetailsPageLink}}" class="home-courses-tile-details-link home-btn">View Details
@@ -21,8 +21,8 @@
               </a>
             </div>
           </div>
-          <div class="col-md-6" *ngIf="!helperMethods.userHasClaim('CanViewFeatures')" class="home-courses-div">
-            <div *ngFor="let course of coursesWhenNoFeatureTile| slice:0:3">
+          <div class="col-md-6" *ngIf="!helperMethods.userHasClaim('CanViewFeatures')">
+            <div *ngFor="let course of coursesWhenNoFeatureTile| slice:0:3" class="home-courses-div">
               <h3>{{course.courseName}}</h3>
               <p class="home-item-description">{{course.courseDescription}}</p>
               <a href="{{course.courseDetailsPageLink}}" class="home-courses-tile-details-link home-btn">View Details

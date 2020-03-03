@@ -2,7 +2,7 @@ import { Feature } from '../models/feature';
 
 export const FEATURES: Feature[] = [
   {
-    Name: 'Show Home Page',
+    Name: 'Show Home page',
     Description: 'When it is enabled user can see Home page',
     CreatedDate: new Date("2019-01-16"),
     UpdatedDate: new Date("2019-01-18"),
@@ -16,22 +16,29 @@ export const FEATURES: Feature[] = [
     State: true
   },
   {
-    Name: 'Show courses page',
+    Name: 'Show Courses page',
     Description: 'When it is enabled user can see Courses page',
     CreatedDate: new Date("2019-09-19"),
     UpdatedDate: new Date("2019-10-20"),
     State: false
   },
   {
-    Name: 'Show courses filter',
+    Name: 'Show Courses filter',
     Description: 'When it is enabled user can see Courses page filter',
     CreatedDate: new Date("2019-03-31"),
     UpdatedDate: new Date("2019-06-16"),
     State: false
   },
   {
-    Name: 'Show edit profile',
+    Name: 'Show Edit profile',
     Description: 'When it is enabled user can see Edit profile page',
+    CreatedDate: new Date("2020-01-14"),
+    UpdatedDate: new Date("2020-02-09"),
+    State: true
+  },
+  {
+    Name: 'Show Featues page',
+    Description: 'When it is enabled user can see Features page',
     CreatedDate: new Date("2020-01-14"),
     UpdatedDate: new Date("2020-02-09"),
     State: true
