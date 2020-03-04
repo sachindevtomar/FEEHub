@@ -117,7 +117,7 @@
                     <label for="editprofile-editclaims" class="col-md-12 editprofile-main-form-label">
                         Claims</label>
                     <div class="col-md-3">
-                        <input type="text" id="editprofile-editclaims" class="editprofile-main-form-input">
+                        <textarea type="text" id="editprofile-editclaims" rows="2" class="editprofile-main-form-input"></textarea>
                     </div>
                 </div>
             </div>
@@ -131,6 +131,7 @@
                         <span class="glyphicon glyphicon-plus"></span> Add Claims
                     </a>
                 </div>
+                <div class="editprofile-claim-horizontal-line"></div>
                 <app-add-claim-modal></app-add-claim-modal>
             </div>
             <br />
@@ -138,9 +139,11 @@
             <!--Save and Cancel button-->
             <div class="row">
                 <div class="editprofile-button-save-cancel">
-                    <button class="btn btn-primary editprofile-save"> Save
-                    </button>
                     <button class="btn btn-primary"> Cancel
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                    <button class="btn btn-primary editprofile-save"> Save
+                        <span class="glyphicon glyphicon-play"></span>
                     </button>
                 </div>
             </div>
