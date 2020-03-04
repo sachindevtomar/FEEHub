@@ -20,8 +20,13 @@ $background-darkRed: #b92026;
     }
 
     .editprofile-main-form {
-      margin-top: 50px;
+      margin-top: 15px;
       margin-bottom: 30px;
+
+      .editprofile-main-form-heading {
+        margin-left: 15px;
+        margin-bottom: 10px;
+      }
 
       .editprofile-main-form-input {
         width: 100%;
