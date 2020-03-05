@@ -43,7 +43,7 @@
                         </label>
                     </div>
                     <div class="col-md-9 col-sm-9">
-                        <span>Country</span>
+                        <span>{{currentUser.country}}</span>
                     </div>
                 </div>
                 <div class="row col-md-12">
@@ -53,7 +53,7 @@
                         </label>
                     </div>
                     <div class="col-md-9 col-sm-9">
-                        <span>Gender</span>
+                        <span>{{currentUser.gender}}</span>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <label for="editprofile-editname" class="col-md-12 editprofile-main-form-label"> Name</label>
-                    <div class="col-md-3">
+                    <div class="col-md-5">
                         <input type="text" id="editprofile-editname" class="editprofile-main-form-input"
                             value="{{currentUser.name}}">
                     </div>
@@ -76,7 +76,7 @@
                 <div class="col-md-12 col-sm-12">
                     <label for="editprofile-editusername" class="col-md-12 editprofile-main-form-label">
                         Username</label>
-                    <div class="col-md-3">
+                    <div class="col-md-5">
                         <input type="text" id="editprofile-editusername" class="editprofile-main-form-input"
                             value="{{currentUser.username}}" disabled>
                     </div>
@@ -86,7 +86,7 @@
                 <div class="col-md-12 col-sm-12">
                     <label for="editprofile-editemail" class="col-md-12 editprofile-main-form-label">
                         Email</label>
-                    <div class="col-md-3">
+                    <div class="col-md-5">
                         <input type="text" id="editprofile-editemail" class="editprofile-main-form-input"
                             value="{{currentUser.emailid}}">
                     </div>
@@ -95,8 +95,8 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <label for="editprofile-editphone" class="col-md-12 editprofile-main-form-label">
-                        Phone</label>
-                    <div class="col-md-3">
+                        Contact Number</label>
+                    <div class="col-md-5">
                         <input type="text" id="editprofile-editphone" class="editprofile-main-form-input"
                             value="{{currentUser.phoneNumber}}">
                     </div>
@@ -104,9 +104,44 @@
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12">
+                    <label for="editprofile-editphone" class="col-md-12 editprofile-main-form-label">
+                        Country</label>
+                    <div class="col-md-5">
+                        <select class="browser-default custom-select editprofile-main-form-input">
+                            <option selected>{{currentUser.country}}</option>
+                            <option value="1">India</option>
+                            <option value="2">USA</option>
+                            <option value="3">Dubai</option>
+                            <option value="4">China</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <label for="editprofile-editphone" class="col-md-12 editprofile-main-form-label">
+                        Gender</label>
+                    <div class="col-md-5 editprofile-editgender">
+                        <label class="radio-inline">
+                            <input type="radio" name="gender" checked>Female
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="gender">Male
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="gender"> Custom
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="gender"> Prefer not to say
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
                     <label for="editprofile-editrole" class="col-md-12 editprofile-main-form-label">
                         Role</label>
-                    <div class="col-md-3">
+                    <div class="col-md-5">
                         <input type="text" id="editprofile-editrole" class="editprofile-main-form-input" disabled
                             value="{{currentUser.role}}">
                     </div>
@@ -116,8 +151,30 @@
                 <div class="col-md-12 col-sm-12">
                     <label for="editprofile-editclaims" class="col-md-12 editprofile-main-form-label">
                         Claims</label>
-                    <div class="col-md-3">
-                        <textarea type="text" id="editprofile-editclaims" rows="2" class="editprofile-main-form-input"></textarea>
+                    <div class="col-md-5">
+                        <textarea type="text" id="editprofile-editclaims" rows="2" class="editprofile-main-form-input"
+                            disabled>{{currentUser.claims}}</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="editprofile-add-claim-area">
+                    <a class="btn editprofile-add-cliams-btn" data-toggle="modal" data-target="#add-claim-modal">
+                        Claims <span class="glyphicon glyphicon-plus"></span>
+                    </a>
+                </div>
+                <app-add-claim-modal></app-add-claim-modal>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h3>Preferences</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <label for="editprofile-add-areaofinterest" class="col-md-12 editprofile-main-form-label">
+                        Add Areas of Interest</label>
+                    <div class="col-md-5">
                     </div>
                 </div>
             </div>
@@ -125,18 +182,7 @@
 
         <!-- Add Claim button area -->
         <div class="row editprofile-buttons">
-            <div class="row">
-                <div class="editprofile-add-claim-area">
-                    <a class="btn btn-primary" data-toggle="modal" data-target="#add-claim-modal">
-                        <span class="glyphicon glyphicon-plus"></span> Add Claims
-                    </a>
-                </div>
-                <div class="editprofile-claim-horizontal-line"></div>
-                <app-add-claim-modal></app-add-claim-modal>
-            </div>
-            <br />
-
-            <!--Save and Cancel button-->
+            <div class="editprofile-claim-horizontal-line"></div>
             <div class="row">
                 <div class="editprofile-button-save-cancel">
                     <button class="btn btn-primary"> Cancel

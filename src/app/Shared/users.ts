@@ -8,7 +8,10 @@ export const USER: User[] = [
         password: "anchal",
         claims: ["CanViewCourses", "CanViewFeatures", "CanModifyFeatures", "CanViewCourseDetailsPage"],
         emailid: "anchal@maq.com",
-        phoneNumber: "000000-0000"
+        phoneNumber: "000000-0000",
+        country: "India",
+        gender: "Female",
+        areaOfInterest: []
     },
     {
         name: 'Sachin Dev Tomar',
@@ -17,7 +20,10 @@ export const USER: User[] = [
         password: "sachin",
         claims: ["CanViewCourses", "CanModifyFeatures"],
         emailid: "sachin@maq.com",
-        phoneNumber: "000000-0000"
+        phoneNumber: "000000-0000",
+        country: "Dubai",
+        gender: "Male",
+        areaOfInterest: []
     },
     {
         name: 'User 1',
@@ -26,7 +32,10 @@ export const USER: User[] = [
         password: "pass1",
         claims: ["CanViewCourses", "CanViewFeatures"],
         emailid: "user1@maq.com",
-        phoneNumber: "000000-0000"
+        phoneNumber: "000000-0000",
+        country: "Dubai",
+        gender: "Male",
+        areaOfInterest: []
     },
     {
         name: 'User 2',
@@ -35,7 +44,10 @@ export const USER: User[] = [
         password: "pass2",
         claims: ["CanViewFeatures"],
         emailid: "user2@maq.com",
-        phoneNumber: "000000-0000"
+        phoneNumber: "000000-0000",
+        country: "Dubai",
+        gender: "Male",
+        areaOfInterest: []
     },
     {
         name: 'User 3',
@@ -44,7 +56,10 @@ export const USER: User[] = [
         password: "pass3",
         claims: ["CanViewCourses"],
         emailid: "user3@maq.com",
-        phoneNumber: "000000-0000"
+        phoneNumber: "000000-0000",
+        country: "Dubai",
+        gender: "Male",
+        areaOfInterest: []
     },
     {
         name: 'User 4',
@@ -53,6 +68,9 @@ export const USER: User[] = [
         password: "pass4",
         claims: [],
         emailid: "user4@maq.com",
-        phoneNumber: "000000-0000"
+        phoneNumber: "000000-0000",
+        country: "Dubai",
+        gender: "Male",
+        areaOfInterest: []
     }
 ];

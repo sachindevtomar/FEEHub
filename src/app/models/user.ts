@@ -6,4 +6,7 @@ export class User{
     claims: string[];
     emailid: string;
     phoneNumber: string;
+    country: string;
+    gender: string;
+    areaOfInterest: string[];
 }

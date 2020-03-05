@@ -43,6 +43,9 @@ export class AuthenticationLoginInterceptor implements HttpInterceptor {
                 emailid: user.emailid,
                 phoneNumber: user.phoneNumber,
                 claims: user.claims,
+                country: user.country,
+                gender: user.gender,
+                areaOfInterest: user.areaOfInterest,
                 token: 'fake-jwt-token'
             })
         }
