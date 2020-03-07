@@ -30,7 +30,7 @@ $background-darkRed: #b92026;
 
       .editprofile-main-form-input {
         width: 100%;
-        padding: 2px;
+        padding: 7px;
         margin-top: 10px;
         margin-bottom: 15px;
 
@@ -39,15 +39,47 @@ $background-darkRed: #b92026;
           outline: 2px dashed $background-darkRed;
         }
       }
+      .editprofile-editgender {
+        margin-bottom: 15px;
+      }
+      .editprofile-add-cliams-btn {
+        margin-left: 18px;
+        color: black;
+        font-weight: 500;
+        font-size: 15px;
+
+        .glyphicon-plus {
+          top: 2.5px;
+          color: #b92026;
+        }
+      }
     }
 
     .editprofile-buttons {
-      margin-left: 30px;
+      margin-left: 15px;
+      .editprofile-claim-horizontal-line {
+        margin-top: 10px;
+        border-bottom: 1px solid $background-darkRed;
+      }
 
       .editprofile-button-save-cancel {
+        float: right;
         margin-bottom: 30px;
         .editprofile-save {
           margin-right: 10px;
+        }
+        .btn-primary {
+          border: 0;
+          background-color: inherit;
+          color: black;
+          font-weight: 500;
+          font-size: 18px;
+
+          .glyphicon-play,
+          .glyphicon-remove {
+            top: 2.5px;
+            color: #b92026;
+          }
         }
       }
 
@@ -55,6 +87,10 @@ $background-darkRed: #b92026;
         height: 35px;
         width: 125px;
       }
+    }
+    h3{
+      margin-left: 15px;
+      margin-bottom: 15px;
     }
   }
 }
