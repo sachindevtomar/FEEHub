@@ -5,6 +5,9 @@ import { EditprofileComponent } from "./editprofile.component";
 import { RouterModule } from '@angular/router';
 import { EditprofileRoutes } from './editprofile.route';
 import { AddClaimModalComponent } from "../add-claim-modal/add-claim-modal.component";
+import { TagInputModule } from 'ngx-chips';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // this is needed!
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [EditprofileComponent,
@@ -12,7 +15,10 @@ import { AddClaimModalComponent } from "../add-claim-modal/add-claim-modal.compo
     exports: [EditprofileComponent],
     imports: [
         RouterModule.forChild(EditprofileRoutes),
-        CommonModule
+        CommonModule,
+        TagInputModule,
+        FormsModule,
+        ReactiveFormsModule
     ]
 })
 export class EditprofileModule { }
