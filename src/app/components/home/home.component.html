@@ -1,8 +1,13 @@
 <div class="container">
   <main role="main">
-    <div *ngIf="currentUser">
-      <h1 class="user-welcome">Welcome, {{name}}.</h1>
-      <p class="user-role">You’re logged in as {{role}}</p>
+    <div *ngIf="currentUser" class="row">
+      <div class="col-md-6">
+        <h1 class="user-welcome">Welcome, {{name}}.</h1>
+        <p class="user-role">You’re logged in as {{role}}</p>
+      </div>
+      <div class="col-md-6">
+        <img class="img-fluid" src="/assets/images/HomePageImage.png" alt="home page image" />
+      </div>
     </div>
 
     <div class="home-tiles row">
