@@ -1,8 +1,4 @@
-$lt-gray: #ddd;
-$background-dark: #512da8;
-$background-light: #9575cd;
-$background-pale: #d1c4e9;
-$background-moredark: #4527a0;
+$background-light: #000000;
 $background-darkRed: #b92026;
 
 // Small tablets (portrait view)
@@ -11,13 +7,6 @@ $screen-md-min: 768px;
 @mixin zero-margin($pad-up-down, $pad-left-right) {
   margin: 0px auto;
   padding: $pad-up-down $pad-left-right;
-}
-
-.jumbotron {
-  @include zero-margin(70px, 30px);
-  background: $background-light;
-  color: floralwhite;
-  min-height: 150px;
 }
 
 .home-navbar {
@@ -44,6 +33,10 @@ $screen-md-min: 768px;
       color: $background-light;
     }
     a:active {
+      color: $background-light;
+    }
+    a:focus {
+      outline: none;
       color: $background-light;
     }
     .header-user-img {

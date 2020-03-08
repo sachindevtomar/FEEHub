@@ -1,3 +1,5 @@
+$background-darkRed: #b92026;
+
 .container {
   .user-welcome {
     font-size: 46px;
@@ -82,5 +84,8 @@
         color: #b92026;
       }
     }
+  }
+  a:focus{
+    outline: 2px dashed $background-darkRed;
   }
 }
