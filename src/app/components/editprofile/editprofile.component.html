@@ -171,15 +171,16 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <label for="editprofile-add-areaofinterest" class="col-md-12 editprofile-main-form-label">
-                        Add Areas of Interest</label>
-                    <div class="col-md-5">
-                    </div>
-                </div>
+                <tag-input
+                    [theme]="'bootstrap'"
+                    [ngModel]="currentUser.areaOfInterest"
+                    name="items" class="editprofile-tag-input col-md-12 col-sm-12">
+                </tag-input>
             </div>
+            
         </div>
 
+        
         <!-- Add Claim button area -->
         <div class="row editprofile-buttons">
             <div class="editprofile-claim-horizontal-line"></div>
