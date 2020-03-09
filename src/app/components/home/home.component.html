@@ -21,7 +21,7 @@
             <div *ngFor="let course of courses| slice:0:3" class="home-courses-div">
               <h3>{{course.courseName}}</h3>
               <p class="home-item-description">{{course.courseDescription}}</p>
-              <a href="{{course.courseDetailsPageLink}}" class="home-courses-tile-details-link home-btn"
+              <a [routerLink]="['/coursedetails', course.id]" class="home-courses-tile-details-link home-btn"
                 *ngIf="helperMethods.userHasClaim('CanViewCourseDetailsPage')">View Details
                 <span class="glyphicon glyphicon-play"></span>
               </a>
@@ -31,7 +31,7 @@
             <div *ngFor="let course of coursesWhenNoFeatureTile| slice:0:3" class="home-courses-div">
               <h3>{{course.courseName}}</h3>
               <p class="home-item-description">{{course.courseDescription}}</p>
-              <a href="{{course.courseDetailsPageLink}}" class="home-courses-tile-details-link home-btn"
+              <a [routerLink]="['/coursedetails', course.id]" class="home-courses-tile-details-link home-btn"
                 *ngIf="helperMethods.userHasClaim('CanViewCourseDetailsPage')">View Details
                 <span class="glyphicon glyphicon-play"></span></a>
             </div>

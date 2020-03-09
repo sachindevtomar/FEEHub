@@ -28,6 +28,11 @@ export const routes: Routes = [
         canActivate: [AuthGuard]
     },
     {
+        path: 'coursedetails/:id', 
+        loadChildren: '../components/coursedetails/coursedetails.module#CoursesdetailsModule',
+        canActivate: [AuthGuard]
+    },
+    {
         path: '', 
         redirectTo: '/home', 
         pathMatch:'full'
