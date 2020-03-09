@@ -16,15 +16,13 @@ import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { AuthenticationBackendProvider } from "./_helpers";
 import { JwtInterceptor } from "./_helpers/jwt.interceptor";
 import { ErrorInterceptor } from "./_helpers/error.interceptor";
-import { CoursedetailsComponent } from './components/coursedetails/coursedetails.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
-    CoursedetailsComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
