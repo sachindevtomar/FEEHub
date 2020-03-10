@@ -8,7 +8,7 @@
     <div id="feature-search-box">
       <input type="text" placeholder="Search for a feature" [(ngModel)]="featureSearchText" aria-label="Search"
         id="feature-search-inputbox">
-      <button class="glyphicon glyphicon-search" title="search button" id="feature-search-btn">
+      <button class="glyphicon glyphicon-search" title="search button" id="feature-search-btn" tabindex="-1">
         <span class="x-screen-reader"></span>
       </button>
     </div>
@@ -43,11 +43,11 @@
         </tbody>
       </table>
     </div>
-    
+
     <!-- Add feature button area -->
     <div class="feature-add-feature-area">
-      <a class="btn btn-primary" data-toggle="modal" data-target="#add-feature-modal">
-        <span class="glyphicon glyphicon-plus"></span> Add feature
+      <a class="btn feature-add-btn" data-toggle="modal" data-target="#add-feature-modal" tabindex="0"> Feature
+        <span class="glyphicon glyphicon-plus"></span>
       </a>
     </div>
 
