@@ -1,1 +1,21 @@
-<p>{{course.courseName}}</p>
+<div class="container">
+    <main id="course-detail-content-container">
+        <div class="course-detail-main-heading">
+            <h1>Course Details</h1>
+        </div>
+        <div class="course-detail-main-content">
+            <div class="course-detail-heading">
+                <h2>{{course.courseName}}</h2>
+            </div>
+            <div class="row course-detail-description">
+                <p class="col-md-8">{{course.courseDescription}}</p>
+            </div>
+            <div class="course-detail-duration">
+                <p><b>Duration:</b> {{course.duration}}</p>
+            </div>
+            <div class="course-detail-tags">
+                <p><b>Tags:</b> {{course.tags}}</p>
+            </div>
+        </div>
+    </main>
+</div>
