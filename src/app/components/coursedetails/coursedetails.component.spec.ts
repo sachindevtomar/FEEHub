@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CoursedetailsComponent } from './coursedetails.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ActivatedRoute } from '@angular/router';
 
 describe('CoursedetailsComponent', () => {
   let component: CoursedetailsComponent;
@@ -8,7 +10,12 @@ describe('CoursedetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CoursedetailsComponent ]
+      imports: [ RouterTestingModule ],
+      declarations: [ CoursedetailsComponent ],
+      providers: [CoursedetailsComponent, {
+        provide: ActivatedRoute,
+        useValue: {snapshot: {params: {'id': '1002'}}}
+      }]
     })
     .compileComponents();
   }));

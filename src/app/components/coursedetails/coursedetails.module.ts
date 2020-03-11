@@ -5,7 +5,6 @@ import { CoursedetailsComponent } from './coursedetails.component';
 import { RouterModule } from '@angular/router';
 import { CoursedetailsRoutes } from './coursedetails.route';
 
-
 @NgModule({
     declarations: [CoursedetailsComponent],
     exports: [CoursedetailsComponent],

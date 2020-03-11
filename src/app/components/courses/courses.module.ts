@@ -18,6 +18,7 @@ imports: [
     FormsModule,
     RouterModule.forChild(CoursesRoutes),
     CommonModule
-]
+],
+providers: []
 })
 export class CoursesModule { }
