@@ -7,7 +7,7 @@ $lt-gray: #ddd;
 
 .container {
   h1 {
-    font-size: 46px;
+    font-size: 40px;
     font-weight: 600;
     line-height: 56px;
   }
@@ -100,8 +100,8 @@ $lt-gray: #ddd;
             outline: 2px dashed #b92026;
           }
 
-          &:hover{
-           box-shadow: 0 0 4px;
+          &:hover {
+            box-shadow: 0 0 4px;
           }
         }
       }
@@ -181,11 +181,6 @@ $lt-gray: #ddd;
           .course-card-each-item {
             padding: 10px;
             height: auto;
-            .courses-card-title {
-            }
-
-            .courses-card-text {
-            }
 
             .course-information-courseTag-div {
               background-color: $background-darkRed;
@@ -218,7 +213,7 @@ $lt-gray: #ddd;
               }
             }
 
-            .course-information-duration-p{
+            .course-information-duration-p {
               background-color: $lt-gray;
               width: auto;
               padding: 2px;
