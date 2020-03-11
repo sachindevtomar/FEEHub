@@ -1,6 +1,11 @@
 $background-darkRed: #b92026;
 
 .feature-page {
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 56px;
+  }
   #feature-search-box {
     max-width: 600px !important;
     position: relative;
