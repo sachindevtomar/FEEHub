@@ -39,7 +39,7 @@ describe('HeaderComponent', () => {
   });
 
 
-  fit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
