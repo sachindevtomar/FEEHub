@@ -1,11 +1,10 @@
+$background-darkRed: #b92026;
 
-$background-darkRed: #B92026;
-
-#add-feature-modal{
-    #add-feature-submit-btn{
-        margin: auto;
-    }
-    .close{
-        color: $background-darkRed;;
-    }
+#add-feature-modal {
+  #add-feature-submit-btn {
+    margin: auto;
+  }
+  .close {
+    color: $background-darkRed;
+  }
 }

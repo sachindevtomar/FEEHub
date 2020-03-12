@@ -10,14 +10,14 @@ describe('CoursedetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ RouterTestingModule ],
-      declarations: [ CoursedetailsComponent ],
+      imports: [RouterTestingModule],
+      declarations: [CoursedetailsComponent],
       providers: [CoursedetailsComponent, {
         provide: ActivatedRoute,
-        useValue: {snapshot: {params: {'id': '1002'}}}
+        useValue: { snapshot: { params: { 'id': '1002' } } }
       }]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -11,7 +11,7 @@ import { AuthenticationService } from '../../services';
 })
 export class HeaderComponent implements OnInit {
 
-  
+
   currentUser = JSON.parse(localStorage.getItem('currentUser'));
   name = this.currentUser.name;
   role = this.currentUser.role;
@@ -22,12 +22,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  openLoginForm() {
-    //this.dialog.open(LoginComponent, {width: '500px', height: '450px'});
-  }
-
   logout() {
     this.authenticationService.logout();
     this.router.navigate(['/login']);
-}
+  }
 }

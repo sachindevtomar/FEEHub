@@ -1,21 +1,21 @@
 import { Course } from "../models/course";
 
-export const COURSES: Course[] =[
+export const COURSES: Course[] = [
     {
         id: 1001,
         courseName: 'Introduction to the C# Language and the .NET Framework',
         courseDescription: 'C# is an elegant and type-safe object-oriented language that enables developers to build a variety of secure and robust applications that run on the .NET Framework.',
         courseDetailsPageLink: 'https://link1',
-        tags: ['C#','.Net'],
+        tags: ['C#', '.Net'],
         duration: 15
 
-    }, 
+    },
     {
         id: 1002,
         courseName: 'Xamarin',
         courseDescription: 'Xamarin is an open-source platform for building modern and performant applications for iOS, Android, and Windows with .NET. Xamarin is an abstraction layer that manages communication of shared code with underlying platform code. Xamarin runs in a managed environment that provides conveniences such as memory allocation and garbage collection.',
         courseDetailsPageLink: 'https://link1',
-        tags: ['C#','Xamarin'],
+        tags: ['C#', 'Xamarin'],
         duration: 6
     },
     {
@@ -23,7 +23,7 @@ export const COURSES: Course[] =[
         courseName: 'Introduction to F#',
         courseDescription: 'F# programming primarily involves defining types and functions that are type-inferred and generalized automatically. This allows your focus to remain on the problem domain and manipulating its data, rather than the details of programming.',
         courseDetailsPageLink: 'https://link1',
-        tags: ['C#','F#'],
+        tags: ['C#', 'F#'],
         duration: 15
     },
     {
@@ -31,7 +31,7 @@ export const COURSES: Course[] =[
         courseName: 'Bing Spatial Data Services',
         courseDescription: 'The Bing™ Spatial Data Services Application Programming Interface (API) provides a Representational State Transfer (REST) interface that can geocode, store and query spatial data. This simple REST interface accomplishes tasks by setting parameters in a URL and then submitting the URL as an HTTP request.',
         courseDetailsPageLink: 'https://link1',
-        tags: ['Bing','Web', 'Maps'],
+        tags: ['Bing', 'Web', 'Maps'],
         duration: 4
     },
     {
@@ -39,7 +39,7 @@ export const COURSES: Course[] =[
         courseName: 'Bing Spatial Data Services',
         courseDescription: 'The Bing Maps SDK for Android and Bing Maps SDK for iOS are libraries for building mapping applications for Android and iOS. The SDKs feature a native map control and an accompanying map services API set. The map control is powered by a full vector 3D map engine with a number of standard mapping capabilities including displaying icons, drawing polylines and polygons, and overlaying texture sources. The engine brings in the same 3D Native support you know from the Xaml Map Control in Windows 10, including worldwide 3D elevation data (via our Digital Elevation Model).',
         courseDetailsPageLink: 'https://link1',
-        tags: ['Bing', 'Android' , 'iOS'],
+        tags: ['Bing', 'Android', 'iOS'],
         duration: 11
     },
     {
@@ -80,7 +80,7 @@ export const COURSES: Course[] =[
         courseDescription: 'Microsoft Edge on iOS and Android can now take advantage of single sign-on (SSO) to all web apps (SaaS and on-premises) that are Azure AD-connected. This means users of Microsoft Edge will be able to access Azure AD-connected web apps without having to re-enter their credentials. ',
         courseDetailsPageLink: 'https://link1',
         tags: ['Browser', 'Edge'],
-        duration:9
+        duration: 9
     },
     {
         id: 1011,

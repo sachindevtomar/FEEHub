@@ -10,10 +10,10 @@ describe('FeaturesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ RouterTestingModule ],
-      declarations: [ FeaturesComponent, FeaturesFilterPipe ]
+      imports: [RouterTestingModule],
+      declarations: [FeaturesComponent, FeaturesFilterPipe]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

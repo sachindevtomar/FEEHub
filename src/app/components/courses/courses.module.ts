@@ -4,21 +4,21 @@ import { CommonModule } from '@angular/common';
 import { CoursesComponent } from './courses.component';
 import { RouterModule } from '@angular/router';
 import { CoursesRoutes } from './courses.route';
-import {CoursesFilterPipe} from '../../pipes/coursesfilter.pipe';
+import { CoursesFilterPipe } from '../../pipes/coursesfilter.pipe';
 import { JwPaginationComponent } from 'jw-angular-pagination';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-declarations: [CoursesComponent,
-    CoursesFilterPipe,
-    JwPaginationComponent],
+    declarations: [CoursesComponent,
+        CoursesFilterPipe,
+        JwPaginationComponent],
 
-exports: [CoursesComponent],
-imports: [
-    FormsModule,
-    RouterModule.forChild(CoursesRoutes),
-    CommonModule
-],
-providers: []
+    exports: [CoursesComponent],
+    imports: [
+        FormsModule,
+        RouterModule.forChild(CoursesRoutes),
+        CommonModule
+    ],
+    providers: []
 })
 export class CoursesModule { }

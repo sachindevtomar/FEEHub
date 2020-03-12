@@ -11,8 +11,8 @@ describe('AppComponent', () => {
         AppComponent
       ],
       providers: [HttpClient,
-                  HttpHandler
-       ]
+        HttpHandler
+      ]
     }).compileComponents();
   }));
   it('should create the app', async(() => {

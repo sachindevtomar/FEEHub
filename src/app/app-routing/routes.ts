@@ -1,41 +1,41 @@
-import {Routes} from '@angular/router';
+import { Routes } from '@angular/router';
 import { AuthGuard } from '../_helpers';
 
 
 export const routes: Routes = [
     {
-        path:'home', 
-        loadChildren: '../components/home/home.module#HomeModule', 
+        path: 'home',
+        loadChildren: '../components/home/home.module#HomeModule',
         canActivate: [AuthGuard]
     },
-    { 
-        path: 'features', 
+    {
+        path: 'features',
         loadChildren: '../components/features/features.module#FeaturesModule',
-        canActivate: [AuthGuard] 
+        canActivate: [AuthGuard]
     },
     {
-        path: 'login', 
+        path: 'login',
         loadChildren: '../components/login/login.module#LoginModule',
     },
     {
-        path: 'courses', 
+        path: 'courses',
         loadChildren: '../components/courses/courses.module#CoursesModule',
         canActivate: [AuthGuard]
     },
     {
-        path: 'editprofile', 
+        path: 'editprofile',
         loadChildren: '../components/editprofile/editprofile.module#EditprofileModule',
         canActivate: [AuthGuard]
     },
     {
-        path: 'coursedetails/:id', 
+        path: 'coursedetails/:id',
         loadChildren: '../components/coursedetails/coursedetails.module#CoursesdetailsModule',
         canActivate: [AuthGuard]
     },
     {
-        path: '', 
-        redirectTo: '/home', 
-        pathMatch:'full'
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full'
     }
 ];
 

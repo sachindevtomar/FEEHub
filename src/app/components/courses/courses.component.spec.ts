@@ -11,15 +11,15 @@ describe('CoursesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ RouterTestingModule ],
-      declarations: [ CoursesComponent ,
-                      CoursesFilterPipe
-                    ],
-      providers: [ HttpClient,
-                   HttpHandler
-                 ]
+      imports: [RouterTestingModule],
+      declarations: [CoursesComponent,
+        CoursesFilterPipe
+      ],
+      providers: [HttpClient,
+        HttpHandler
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

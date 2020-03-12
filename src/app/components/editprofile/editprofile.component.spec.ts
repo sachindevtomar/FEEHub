@@ -8,18 +8,19 @@ describe('EditprofileComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditprofileComponent ]
+      declarations: [EditprofileComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
-    var store = {'getItem': "{\"name\":\"Sachin Dev Tomar\",\"role\":\"Sub-Administrator\",\"username\":\"sachin\",\"password\":\"sachin\",\"claims\":[\"CanViewCourses\",\"CanModifyFeatures\"],\"emailid\":\"sachin@maq.com\",\"phoneNumber\":\"000000-0000\",\"country\":\"Dubai\",\"gender\":\"Male\",\"areaOfInterest\":[\"C#\",\"BOT\",\"Android\",\"Dynamics 365\"]}"
-     };
+    var store = {
+      'getItem': "{\"name\":\"Sachin Dev Tomar\",\"role\":\"Sub-Administrator\",\"username\":\"sachin\",\"password\":\"sachin\",\"claims\":[\"CanViewCourses\",\"CanModifyFeatures\"],\"emailid\":\"sachin@maq.com\",\"phoneNumber\":\"000000-0000\",\"country\":\"Dubai\",\"gender\":\"Male\",\"areaOfInterest\":[\"C#\",\"BOT\",\"Android\",\"Dynamics 365\"]}"
+    };
 
     spyOn(localStorage, 'getItem').and.callFake(function (key) {
-    return store['getItem'];
+      return store['getItem'];
     });
     spyOn(localStorage, 'setItem').and.callFake(function (key, value) {
-    return store[key] = value + '';
+      return store[key] = value + '';
     });
 
   }));

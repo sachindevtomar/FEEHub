@@ -29,7 +29,7 @@ import { ErrorInterceptor } from "./_helpers/error.interceptor";
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatFormFieldModule, 
+    MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule
   ],
