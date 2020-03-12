@@ -11,7 +11,7 @@ export const USER: User[] = [
         phoneNumber: "000000-0000",
         country: "India",
         gender: "Female",
-        areaOfInterest: [".Net","Xamarin","Android"]
+        areaOfInterest: [".Net", "Xamarin", "Android"]
     },
     {
         name: 'Sachin Dev Tomar',
@@ -23,7 +23,7 @@ export const USER: User[] = [
         phoneNumber: "000000-0000",
         country: "Dubai",
         gender: "Male",
-        areaOfInterest: ["C#","BOT","Android","Dynamics 365"]
+        areaOfInterest: ["C#", "BOT", "Android", "Dynamics 365"]
     },
     {
         name: 'User 1',
@@ -35,7 +35,7 @@ export const USER: User[] = [
         phoneNumber: "000000-0000",
         country: "Dubai",
         gender: "Male",
-        areaOfInterest: ["SQL Server","O365"]
+        areaOfInterest: ["SQL Server", "O365"]
     },
     {
         name: 'User 2',
@@ -47,7 +47,7 @@ export const USER: User[] = [
         phoneNumber: "000000-0000",
         country: "Dubai",
         gender: "Male",
-        areaOfInterest: ["Browser", "Edge","Sharepoint"]
+        areaOfInterest: ["Browser", "Edge", "Sharepoint"]
     },
     {
         name: 'User 3',
@@ -59,7 +59,7 @@ export const USER: User[] = [
         phoneNumber: "000000-0000",
         country: "Dubai",
         gender: "Male",
-        areaOfInterest: ["Teams", "Edge","Sharepoint"]
+        areaOfInterest: ["Teams", "Edge", "Sharepoint"]
     },
     {
         name: 'User 4',

@@ -92,6 +92,6 @@ export class CoursesComponent implements OnInit {
   public getCommonCoursesAfterFilter() {
 
     this.finalFilteredCourses = this.filteredCoursesByTags.filter(o => this.filteredCoursesByDuration.some(s => o.id === s.id));
-  
+
   }
 }

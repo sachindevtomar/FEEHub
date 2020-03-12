@@ -13,9 +13,6 @@ import { HelperMethods } from '@app/_helpers/helper.methods';
 })
 export class HomeComponent implements OnInit {
 
-  // dish: Dish;
-  // promotion: Promotion;
-  // leader: Leader;
   public courses: Course[] = COURSES;
   public coursesWhenNoFeatureTile: Course[] = [];
   public features: Feature[] = FEATURES;
@@ -26,26 +23,26 @@ export class HomeComponent implements OnInit {
   constructor(
     private authenticationService: AuthenticationService,
     public helperMethods: HelperMethods) {
-     }
+  }
 
   ngOnInit() {
 
-    var Count = 0; 
+    var Count = 0;
     this.courses.forEach(course => {
-      if(Count>=3)
+      if (Count >= 3)
         this.coursesWhenNoFeatureTile.push(course);
-        Count++;
+      Count++;
     });
     Count = 0;
     this.features.forEach(feature => {
-      if(Count>=3)
+      if (Count >= 3)
         this.featuresWhenNoCourseTile.push(feature);
-        Count++;
+      Count++;
     });
     // this.dish = this.dishservice.getFeaturedDish();
     // this.promotion = this.promotionservice.getFeaturedPromotion();
     // this.leader = this.leaderservice.getFeaturedLeader();
-  } 
+  }
 
   public CanViewBothCourseAndFeaturesTile(): boolean {
     return this.helperMethods.userHasClaim("CanViewCourses") && this.helperMethods.userHasClaim("CanViewFeatures");

@@ -8,13 +8,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginRoutes } from './login.route';
 
 @NgModule({
-declarations: [LoginComponent],
-exports: [LoginComponent],
-imports: [
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule.forChild(LoginRoutes),
-    CommonModule
-]
+    declarations: [LoginComponent],
+    exports: [LoginComponent],
+    imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule.forChild(LoginRoutes),
+        CommonModule
+    ]
 })
 export class LoginModule { }

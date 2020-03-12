@@ -8,7 +8,7 @@ import { routes } from "./routes";
     CommonModule,
     RouterModule.forRoot(routes)
   ],
-  exports:[
+  exports: [
     RouterModule
   ],
   declarations: []

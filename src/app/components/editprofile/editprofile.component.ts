@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditprofileComponent implements OnInit {
 
-  
+
   currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
   constructor() { }
