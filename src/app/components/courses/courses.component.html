@@ -84,7 +84,7 @@
                   <div class="course-card-each-item col-xs-12 col-sm-12 col-md-12"
                     *ngFor="let course of pagedItems| coursesFilter: courseSearchText">
                     <div class="row">
-                      <h3 class="courses-card-title card-title col-md-9">{{course.courseName}}</h3>
+                      <a class="courses-card-title card-title col-md-9" [routerLink]="['/coursedetails', course.id]"><h3>{{course.courseName}}</h3></a>
                       <div class="col-md-3">
                         <p class="course-information-duration-p">Duration: {{course.duration}} months</p>
                       </div>

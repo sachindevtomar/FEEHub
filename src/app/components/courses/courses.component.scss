@@ -182,6 +182,17 @@ $lt-gray: #ddd;
             padding: 10px;
             height: auto;
 
+            .courses-card-title {
+              color: black;
+              &:hover {
+                text-decoration: none;
+              }
+              &:focus {
+                text-decoration: none;
+                outline: 2px dashed $background-darkRed;
+              }
+            }
+
             .course-information-courseTag-div {
               background-color: $background-darkRed;
               color: white;
