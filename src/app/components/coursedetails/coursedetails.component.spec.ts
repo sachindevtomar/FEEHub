@@ -40,7 +40,11 @@ describe('CoursedetailsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  fit('should filter Courses with id', () => {
+  it('should filter courses on the basis of 1002 course id', () => {
     expect(component.getCourse(1002)).toEqual(courseValue);
+  });
+
+  it('should return null for invalid course id', () => {
+    expect(component.getCourse(0)).toEqual(undefined);
   });
 });
