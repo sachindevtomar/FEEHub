@@ -35,4 +35,42 @@ describe('CoursesComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('beginPagination', () => {
+
+    it('should have empty array of paged Items', () => {
+      var pagedItems: Array<any> = [];
+      component.beginPagination(pagedItems);
+      expect(component.pagedItems.length).toBe(0);
+    });
+
+    it('should have item array of paged Items', () => {
+      var pagedItems: Array<any> = ['1', '2', '3'];
+      component.beginPagination(pagedItems);
+      expect(component.pagedItems.length).toBe(3);
+    });
+  });
+
+  describe('showMoreTechnologies', () => {
+    let showMoreDiv: HTMLDivElement;
+    beforeEach(() => {
+       showMoreDiv = document.createElement('div');
+       showMoreDiv.id = "courses-filter-technology";
+       showMoreDiv.style.maxHeight = "300px";
+       component.courseFilterShowMore = false;
+       document.getElementById = jasmine.createSpy('HTML Element').and.returnValue(showMoreDiv);
+    });
+
+    it('should have maxHeight as 400px', () => {
+      component.showMoreTechnologies();
+      expect(showMoreDiv.style.maxHeight).toBe("400px");
+      expect(showMoreDiv.style.overflowY).toBe("scroll");
+    });
+    
+    it('should have true courseFilterShowMore flag', () => {
+      component.showMoreTechnologies();
+      expect(component.courseFilterShowMore).toBeTruthy();
+    });
+  });
+
 });

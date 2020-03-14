@@ -35,7 +35,7 @@ export class CoursesComponent implements OnInit {
     this.currentDurationSliderValue = this.maxDuration = Math.max.apply(Math, COURSES.map(function (o) { return o.duration; }));
   }
 
-  beginPagination(pagedItems: Array<any>) {
+  public beginPagination(pagedItems: Array<any>) {
     this.pagedItems = pagedItems;
   }
 
