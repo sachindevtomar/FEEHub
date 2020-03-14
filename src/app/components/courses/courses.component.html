@@ -49,9 +49,15 @@
                   </button>
                   <ul class="collapse  multi-collapse" id="courses-filter-duration">
                     <li class="slidecontainer">
-                      <input type="range" min="0" max="{{maxDuration}}" value="{{maxDuration}}" class="slider"
-                        id="courses-filter-duration-slider" (change)="filterCoursesUsingDuration()"
-                        aria-label="Slider for duration filter">
+                        <mat-slider
+                        [disabled] = false
+                        [invert] = false      
+                        [thumbLabel] = true     
+                        [(ngModel)] = "currentDurationSliderValue"
+                        [vertical] = false
+                        min="1"
+                        max="{{maxDuration}}"
+                        (change)="filterCoursesUsingDuration()"></mat-slider>
                     </li>
                     <li>
                       <div>

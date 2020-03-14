@@ -7,6 +7,7 @@ import { CoursesRoutes } from './courses.route';
 import { CoursesFilterPipe } from '../../pipes/coursesfilter.pipe';
 import { JwPaginationComponent } from 'jw-angular-pagination';
 import { FormsModule } from '@angular/forms';
+import {MatSliderModule} from '@angular/material/slider';
 
 @NgModule({
     declarations: [CoursesComponent,
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     imports: [
         FormsModule,
         RouterModule.forChild(CoursesRoutes),
-        CommonModule
+        CommonModule,
+        MatSliderModule
     ],
     providers: []
 })
