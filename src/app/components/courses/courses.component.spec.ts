@@ -4,6 +4,7 @@ import { CoursesComponent } from './courses.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { CoursesFilterPipe } from '@app/pipes/coursesfilter.pipe';
+import { HelperMethods } from '@app/_helpers/helper.methods';
 
 describe('CoursesComponent', () => {
   let component: CoursesComponent;
@@ -12,11 +13,14 @@ describe('CoursesComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [CoursesComponent,
+      declarations: [
+        CoursesComponent,
         CoursesFilterPipe
       ],
-      providers: [HttpClient,
-        HttpHandler
+      providers: [
+        HttpClient,
+        HttpHandler,
+        HelperMethods
       ]
     })
       .compileComponents();
