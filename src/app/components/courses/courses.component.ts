@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from "../../models/course";
 import { COURSES } from "../../Shared/courses";
+import {MatSliderModule} from '@angular/material/slider';
 
 @Component({
   selector: 'app-courses',
@@ -22,6 +23,7 @@ export class CoursesComponent implements OnInit {
   public selectedTags: string[] = [];
   public maxDuration: number = 0;
   public currentDurationSliderValue: number = 0;
+
 
   constructor() { }
 
@@ -82,11 +84,8 @@ export class CoursesComponent implements OnInit {
   }
 
   public filterCoursesUsingDuration() {
-
-    this.currentDurationSliderValue = Number((<HTMLInputElement>document.getElementById("courses-filter-duration-slider")).value);
     this.filteredCoursesByDuration = this.coursesAll.filter(x => x.duration <= this.currentDurationSliderValue);
     this.getCommonCoursesAfterFilter();
-
   }
 
   public getCommonCoursesAfterFilter() {
@@ -94,4 +93,12 @@ export class CoursesComponent implements OnInit {
     this.finalFilteredCourses = this.filteredCoursesByTags.filter(o => this.filteredCoursesByDuration.some(s => o.id === s.id));
 
   }
+
+  public formatLabel(value: number) {
+    if (value >= 1000) {
+      return Math.round(value / 1000) + 'k';
+    }
+    return value;
+  }
+
 }
