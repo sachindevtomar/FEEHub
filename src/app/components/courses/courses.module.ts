@@ -8,6 +8,7 @@ import { CoursesFilterPipe } from '../../pipes/coursesfilter.pipe';
 import { JwPaginationComponent } from 'jw-angular-pagination';
 import { FormsModule } from '@angular/forms';
 import {MatSliderModule} from '@angular/material/slider';
+import { HelperMethods } from "../../_helpers/helper.methods";
 
 @NgModule({
     declarations: [CoursesComponent,
@@ -21,6 +22,6 @@ import {MatSliderModule} from '@angular/material/slider';
         CommonModule,
         MatSliderModule
     ],
-    providers: []
+    providers: [HelperMethods]
 })
 export class CoursesModule { }
