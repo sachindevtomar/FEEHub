@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Course } from "../../models/course";
 import { COURSES } from "../../Shared/courses";
 import {MatSliderModule} from '@angular/material/slider';
+import { HelperMethods } from '@app/_helpers/helper.methods';
 
 @Component({
   selector: 'app-courses',
@@ -25,7 +26,7 @@ export class CoursesComponent implements OnInit {
   public currentDurationSliderValue: number = 0;
 
 
-  constructor() { }
+  constructor(public helperMethods: HelperMethods) { }
 
   ngOnInit() {
     this.filteredCoursesByDuration = this.filteredCoursesByTags = this.coursesAll = COURSES;
