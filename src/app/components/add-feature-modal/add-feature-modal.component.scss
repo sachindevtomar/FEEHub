@@ -7,4 +7,84 @@ $background-darkRed: #b92026;
   .close {
     color: $background-darkRed;
   }
+  .add-feature-button-save-cancel {
+    float: right;
+    .add-feature-save {
+      margin-right: 10px;
+    }
+    .btn-primary {
+      border: 0;
+      background-color: inherit;
+      color: black;
+      font-weight: 500;
+      font-size: 18px;
+
+      .glyphicon-play,
+      .glyphicon-remove {
+        top: 2.5px;
+        color: #b92026;
+      }
+    }
+  }
+
+  .feature-state-toggle-label {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+    vertical-align: middle;
+    margin-top: 8px;
+
+    input {
+      display: none;
+    }
+
+    .feature-state-toggle-span {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #a1a6ab;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    .feature-state-toggle-span:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 14px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    input:checked + .feature-state-toggle-span {
+      background-color: $background-darkRed;
+    }
+
+    input:focus + .feature-state-toggle-span {
+      box-shadow: 0 0 1px #2196f3;
+    }
+
+    input:checked + .feature-state-toggle-span:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    /* Rounded feature-state-toggle-spans */
+    .feature-state-toggle-span.feature-state-toggle-round {
+      border-radius: 34px;
+    }
+
+    .feature-state-toggle-span.feature-state-toggle-round:before {
+      border-radius: 50%;
+    }
+  }
+
 }
