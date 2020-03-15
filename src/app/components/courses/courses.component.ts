@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from "../../models/course";
 import { COURSES } from "../../Shared/courses";
-import {MatSliderModule} from '@angular/material/slider';
+import { MatSliderModule } from '@angular/material/slider';
 import { HelperMethods } from '@app/_helpers/helper.methods';
 
 @Component({
@@ -35,7 +35,7 @@ export class CoursesComponent implements OnInit {
     this.currentDurationSliderValue = this.maxDuration = Math.max.apply(Math, COURSES.map(function (o) { return o.duration; }));
   }
 
-  beginPagination(pagedItems: Array<any>) {
+  public beginPagination(pagedItems: Array<any>) {
     this.pagedItems = pagedItems;
   }
 
@@ -54,7 +54,6 @@ export class CoursesComponent implements OnInit {
     this.courseFilterShowMore = !this.courseFilterShowMore;
     document.getElementById('courses-filter-technology').style.maxHeight = "400px";
     document.getElementById('courses-filter-technology').style.overflowY = "scroll";
-
   }
 
   public showLessTechnologies() {
@@ -68,7 +67,6 @@ export class CoursesComponent implements OnInit {
   }
 
   public filterCoursesUsingTags(technology) {
-
     if (this.selectedTags.includes(technology))
       this.selectedTags = this.selectedTags.filter(x => x != technology);
     else
@@ -79,7 +77,6 @@ export class CoursesComponent implements OnInit {
       this.getCommonCoursesAfterFilter();
       return;
     }
-
     this.filteredCoursesByTags = this.coursesAll.filter(x => x.tags.some(s => this.selectedTags.includes(s)));
     this.getCommonCoursesAfterFilter();
   }
@@ -90,16 +87,6 @@ export class CoursesComponent implements OnInit {
   }
 
   public getCommonCoursesAfterFilter() {
-
     this.finalFilteredCourses = this.filteredCoursesByTags.filter(o => this.filteredCoursesByDuration.some(s => o.id === s.id));
-
   }
-
-  public formatLabel(value: number) {
-    if (value >= 1000) {
-      return Math.round(value / 1000) + 'k';
-    }
-    return value;
-  }
-
 }
