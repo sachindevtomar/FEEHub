@@ -7,8 +7,8 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display Login message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to FEEHub!');
+    expect(page.getParagraphText()).toEqual('Please Log In');
   });
 });
