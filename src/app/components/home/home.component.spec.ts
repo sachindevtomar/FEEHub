@@ -55,10 +55,5 @@ describe('HomeComponent', () => {
       spyOn(component.helperMethods,"userHasClaim").and.returnValue(true);
       expect(component.CanViewBothCourseAndFeaturesTile()).toBe(true);
     });
-
   });
-  
-  function createHelperMethod():HelperMethods{
-    return new HelperMethods();
-  }
 });
