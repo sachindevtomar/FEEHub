@@ -43,4 +43,22 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('CanViewBothCourseAndFeaturesTile method', () => {
+
+    it('Method should return false as claim is returning false', () => {
+      spyOn(component.helperMethods,"userHasClaim").and.returnValue(false);
+      expect(component.CanViewBothCourseAndFeaturesTile()).toBe(false);
+    });
+
+    it('Method should return true as claim is returning true', () => {
+      spyOn(component.helperMethods,"userHasClaim").and.returnValue(true);
+      expect(component.CanViewBothCourseAndFeaturesTile()).toBe(true);
+    });
+
+  });
+  
+  function createHelperMethod():HelperMethods{
+    return new HelperMethods();
+  }
 });
