@@ -2,15 +2,15 @@
 
 It is hosted using Firebase and the build setup using GIT Actions. 
 
-Website Link: https://feehub-b8a09.firebaseapp.com/
+<b>Website Link:</b> https://feehub-b8a09.firebaseapp.com/
 
 Use the following test credentials on the above website
 
-Username: anchal
-Password: anchal
-
-Username: sachin
-Password: sachin
+<b>Username:</b> anchal <br>
+<b>Password:</b> anchal
+<br><br>
+<b>Username:</b> sachin <br>
+<b>Password:</b> sachin
 
 ## Development server
 
