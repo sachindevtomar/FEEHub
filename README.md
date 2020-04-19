@@ -1,6 +1,16 @@
 # FEEHub
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+It is hosted using Firebase and the build setup using GIT Actions. 
+
+Website Link: https://feehub-b8a09.firebaseapp.com/
+
+Use the following test credentials on the above website
+
+Username: anchal
+Password: anchal
+
+Username: sachin
+Password: sachin
 
 ## Development server
 
