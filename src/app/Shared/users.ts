@@ -18,7 +18,7 @@ export const USER: User[] = [
         role: 'Sub-Administrator',
         username: "sachin",
         password: "sachin",
-        claims: ["CanViewCourses", "CanModifyFeatures"],
+        claims: ["CanViewCourses", "CanViewFeatures", "CanModifyFeatures", "CanViewCourseDetailsPage"],
         emailid: "sachin@maq.com",
         phoneNumber: "000000-0000",
         country: "Dubai",
